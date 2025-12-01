@@ -1,0 +1,1790 @@
+[
+  {
+    "name": "Mike Maignan",
+    "position": "Goalkeeper",
+    "rating": 76,
+    "basePrice": 3.9
+  },
+  {
+    "name": "Alisson Becker",
+    "position": "Goalkeeper",
+    "rating": 81,
+    "basePrice": 2.8
+  },
+  {
+    "name": "Jordan Pickford",
+    "position": "Goalkeeper",
+    "rating": 80,
+    "basePrice": 10.7
+  },
+  {
+    "name": "Wojciech Szcz\u0119sny",
+    "position": "Goalkeeper",
+    "rating": 81,
+    "basePrice": 6.7
+  },
+  {
+    "name": "Wojciech Szczesny",
+    "position": "Goalkeeper",
+    "rating": 74,
+    "basePrice": 3.1
+  },
+  {
+    "name": "Keylor Navas",
+    "position": "Goalkeeper",
+    "rating": 84,
+    "basePrice": 3.2
+  },
+  {
+    "name": "Marc-Andre ter Stegen",
+    "position": "Goalkeeper",
+    "rating": 76,
+    "basePrice": 9.0
+  },
+  {
+    "name": "Kepa Arrizabalaga",
+    "position": "Goalkeeper",
+    "rating": 89,
+    "basePrice": 7.5
+  },
+  {
+    "name": "Andre Onana",
+    "position": "Goalkeeper",
+    "rating": 81,
+    "basePrice": 4.7
+  },
+  {
+    "name": "David Raya",
+    "position": "Goalkeeper",
+    "rating": 95,
+    "basePrice": 5.9
+  },
+  {
+    "name": "Emiliano Martinez",
+    "position": "Goalkeeper",
+    "rating": 92,
+    "basePrice": 6.7
+  },
+  {
+    "name": "Gregor Kobel",
+    "position": "Goalkeeper",
+    "rating": 77,
+    "basePrice": 9.8
+  },
+  {
+    "name": "Ederson Moraes",
+    "position": "Goalkeeper",
+    "rating": 90,
+    "basePrice": 6.1
+  },
+  {
+    "name": "Keylor Navas",
+    "position": "Goalkeeper",
+    "rating": 98,
+    "basePrice": 3.1
+  },
+  {
+    "name": "Aaron Ramsdale",
+    "position": "Goalkeeper",
+    "rating": 91,
+    "basePrice": 7.2
+  },
+  {
+    "name": "Jos\u00e9 S\u00e1",
+    "position": "Goalkeeper",
+    "rating": 75,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Jos\u00e9 S\u00e1",
+    "position": "Goalkeeper",
+    "rating": 75,
+    "basePrice": 9.6
+  },
+  {
+    "name": "Gianluigi Donnarumma",
+    "position": "Goalkeeper",
+    "rating": 72,
+    "basePrice": 6.3
+  },
+  {
+    "name": "Gregor Kobel",
+    "position": "Goalkeeper",
+    "rating": 78,
+    "basePrice": 4.5
+  },
+  {
+    "name": "Yassine Bounou",
+    "position": "Goalkeeper",
+    "rating": 78,
+    "basePrice": 2.9
+  },
+  {
+    "name": "Yassine Bounou",
+    "position": "Goalkeeper",
+    "rating": 71,
+    "basePrice": 8.2
+  },
+  {
+    "name": "Kepa Arrizabalaga",
+    "position": "Goalkeeper",
+    "rating": 89,
+    "basePrice": 8.0
+  },
+  {
+    "name": "Jan Oblak",
+    "position": "Goalkeeper",
+    "rating": 95,
+    "basePrice": 5.5
+  },
+  {
+    "name": "Emiliano Mart\u00ednez",
+    "position": "Goalkeeper",
+    "rating": 83,
+    "basePrice": 11.1
+  },
+  {
+    "name": "Alisson Becker",
+    "position": "Goalkeeper",
+    "rating": 90,
+    "basePrice": 2.6
+  },
+  {
+    "name": "Gianluigi Donnarumma",
+    "position": "Goalkeeper",
+    "rating": 71,
+    "basePrice": 8.7
+  },
+  {
+    "name": "Andre Onana",
+    "position": "Goalkeeper",
+    "rating": 82,
+    "basePrice": 3.3
+  },
+  {
+    "name": "Thibaut Courtois",
+    "position": "Goalkeeper",
+    "rating": 87,
+    "basePrice": 7.9
+  },
+  {
+    "name": "Antonio R\u00fcdiger",
+    "position": "Defender",
+    "rating": 99,
+    "basePrice": 8.3
+  },
+  {
+    "name": "R\u00faben Dias",
+    "position": "Defender",
+    "rating": 71,
+    "basePrice": 5.4
+  },
+  {
+    "name": "Virgil van Dijk",
+    "position": "Defender",
+    "rating": 85,
+    "basePrice": 5.8
+  },
+  {
+    "name": "Presnel Kimpembe",
+    "position": "Defender",
+    "rating": 91,
+    "basePrice": 4.8
+  },
+  {
+    "name": "R\u00faben Dias",
+    "position": "Defender",
+    "rating": 73,
+    "basePrice": 5.9
+  },
+  {
+    "name": "Pau Torres",
+    "position": "Defender",
+    "rating": 81,
+    "basePrice": 7.0
+  },
+  {
+    "name": "Marquinhos",
+    "position": "Defender",
+    "rating": 94,
+    "basePrice": 6.4
+  },
+  {
+    "name": "Lucas Hern\u00e1ndez",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 5.5
+  },
+  {
+    "name": "Kyle Walker",
+    "position": "Defender",
+    "rating": 85,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Milan \u0160kriniar",
+    "position": "Defender",
+    "rating": 87,
+    "basePrice": 11.5
+  },
+  {
+    "name": "Achraf Hakimi",
+    "position": "Defender",
+    "rating": 89,
+    "basePrice": 6.7
+  },
+  {
+    "name": "Matthijs de Ligt",
+    "position": "Defender",
+    "rating": 75,
+    "basePrice": 10.0
+  },
+  {
+    "name": "Kalidou Koulibaly",
+    "position": "Defender",
+    "rating": 71,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Andrew Robertson",
+    "position": "Defender",
+    "rating": 81,
+    "basePrice": 2.8
+  },
+  {
+    "name": "Dayot Upamecano",
+    "position": "Defender",
+    "rating": 71,
+    "basePrice": 12.1
+  },
+  {
+    "name": "Trent Alexander-Arnold",
+    "position": "Defender",
+    "rating": 74,
+    "basePrice": 6.4
+  },
+  {
+    "name": "Ben White",
+    "position": "Defender",
+    "rating": 93,
+    "basePrice": 11.7
+  },
+  {
+    "name": "Milan \u0160kriniar",
+    "position": "Defender",
+    "rating": 96,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Lucas Hern\u00e1ndez",
+    "position": "Defender",
+    "rating": 97,
+    "basePrice": 12.4
+  },
+  {
+    "name": "Theo Hern\u00e1ndez",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 11.8
+  },
+  {
+    "name": "Trent Alexander-Arnold",
+    "position": "Defender",
+    "rating": 92,
+    "basePrice": 12.0
+  },
+  {
+    "name": "Jules Kound\u00e9",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 10.0
+  },
+  {
+    "name": "Achraf Hakimi",
+    "position": "Defender",
+    "rating": 77,
+    "basePrice": 12.2
+  },
+  {
+    "name": "David Alaba",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 10.7
+  },
+  {
+    "name": "David Alaba",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 11.4
+  },
+  {
+    "name": "Milan \u0160kriniar",
+    "position": "Defender",
+    "rating": 97,
+    "basePrice": 10.5
+  },
+  {
+    "name": "Kyle Walker",
+    "position": "Defender",
+    "rating": 99,
+    "basePrice": 7.1
+  },
+  {
+    "name": "Eder Milit\u00e3o",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 10.2
+  },
+  {
+    "name": "Fikayo Tomori",
+    "position": "Defender",
+    "rating": 96,
+    "basePrice": 11.7
+  },
+  {
+    "name": "Rapha\u00ebl Varane",
+    "position": "Defender",
+    "rating": 86,
+    "basePrice": 2.5
+  },
+  {
+    "name": "Ben White",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 9.3
+  },
+  {
+    "name": "Danilo",
+    "position": "Defender",
+    "rating": 95,
+    "basePrice": 8.5
+  },
+  {
+    "name": "Ben White",
+    "position": "Defender",
+    "rating": 71,
+    "basePrice": 4.1
+  },
+  {
+    "name": "Andrew Robertson",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 6.3
+  },
+  {
+    "name": "Kalidou Koulibaly",
+    "position": "Defender",
+    "rating": 80,
+    "basePrice": 8.3
+  },
+  {
+    "name": "Virgil van Dijk",
+    "position": "Defender",
+    "rating": 70,
+    "basePrice": 5.3
+  },
+  {
+    "name": "Pau Torres",
+    "position": "Defender",
+    "rating": 95,
+    "basePrice": 7.1
+  },
+  {
+    "name": "Alessandro Bastoni",
+    "position": "Defender",
+    "rating": 76,
+    "basePrice": 7.4
+  },
+  {
+    "name": "Presnel Kimpembe",
+    "position": "Defender",
+    "rating": 99,
+    "basePrice": 10.8
+  },
+  {
+    "name": "Jo\u00e3o Cancelo",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 10.6
+  },
+  {
+    "name": "Andrew Robertson",
+    "position": "Defender",
+    "rating": 92,
+    "basePrice": 9.1
+  },
+  {
+    "name": "Jordi Alba",
+    "position": "Defender",
+    "rating": 93,
+    "basePrice": 6.3
+  },
+  {
+    "name": "Marquinhos",
+    "position": "Defender",
+    "rating": 75,
+    "basePrice": 7.8
+  },
+  {
+    "name": "Danilo",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 11.6
+  },
+  {
+    "name": "Antonio R\u00fcdiger",
+    "position": "Defender",
+    "rating": 77,
+    "basePrice": 5.4
+  },
+  {
+    "name": "Trent Alexander-Arnold",
+    "position": "Defender",
+    "rating": 80,
+    "basePrice": 9.8
+  },
+  {
+    "name": "R\u00faben Dias",
+    "position": "Defender",
+    "rating": 73,
+    "basePrice": 9.3
+  },
+  {
+    "name": "Theo Hern\u00e1ndez",
+    "position": "Defender",
+    "rating": 92,
+    "basePrice": 12.2
+  },
+  {
+    "name": "Antonio R\u00fcdiger",
+    "position": "Defender",
+    "rating": 71,
+    "basePrice": 12.7
+  },
+  {
+    "name": "Virgil van Dijk",
+    "position": "Defender",
+    "rating": 85,
+    "basePrice": 4.1
+  },
+  {
+    "name": "C\u00e9sar Azpilicueta",
+    "position": "Defender",
+    "rating": 72,
+    "basePrice": 4.2
+  },
+  {
+    "name": "Fikayo Tomori",
+    "position": "Defender",
+    "rating": 94,
+    "basePrice": 3.0
+  },
+  {
+    "name": "Fikayo Tomori",
+    "position": "Defender",
+    "rating": 72,
+    "basePrice": 7.8
+  },
+  {
+    "name": "Eder Milit\u00e3o",
+    "position": "Defender",
+    "rating": 96,
+    "basePrice": 9.8
+  },
+  {
+    "name": "Aymeric Laporte",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 10.7
+  },
+  {
+    "name": "Denzel Dumfries",
+    "position": "Defender",
+    "rating": 77,
+    "basePrice": 6.7
+  },
+  {
+    "name": "Rapha\u00ebl Varane",
+    "position": "Defender",
+    "rating": 99,
+    "basePrice": 9.8
+  },
+  {
+    "name": "Aymeric Laporte",
+    "position": "Defender",
+    "rating": 97,
+    "basePrice": 3.4
+  },
+  {
+    "name": "Alessandro Bastoni",
+    "position": "Defender",
+    "rating": 74,
+    "basePrice": 10.1
+  },
+  {
+    "name": "Eder Milit\u00e3o",
+    "position": "Defender",
+    "rating": 74,
+    "basePrice": 9.8
+  },
+  {
+    "name": "Jo\u00e3o Cancelo",
+    "position": "Defender",
+    "rating": 72,
+    "basePrice": 4.7
+  },
+  {
+    "name": "Pau Torres",
+    "position": "Defender",
+    "rating": 85,
+    "basePrice": 6.8
+  },
+  {
+    "name": "Marquinhos",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 2.9
+  },
+  {
+    "name": "Kyle Walker",
+    "position": "Defender",
+    "rating": 87,
+    "basePrice": 12.0
+  },
+  {
+    "name": "Ronald Ara\u00fajo",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 4.8
+  },
+  {
+    "name": "Jordi Alba",
+    "position": "Defender",
+    "rating": 78,
+    "basePrice": 9.4
+  },
+  {
+    "name": "C\u00e9sar Azpilicueta",
+    "position": "Defender",
+    "rating": 94,
+    "basePrice": 4.1
+  },
+  {
+    "name": "Theo Hern\u00e1ndez",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 9.3
+  },
+  {
+    "name": "Jordi Alba",
+    "position": "Defender",
+    "rating": 72,
+    "basePrice": 12.9
+  },
+  {
+    "name": "Kalidou Koulibaly",
+    "position": "Defender",
+    "rating": 97,
+    "basePrice": 4.3
+  },
+  {
+    "name": "Matthijs de Ligt",
+    "position": "Defender",
+    "rating": 89,
+    "basePrice": 3.0
+  },
+  {
+    "name": "Denzel Dumfries",
+    "position": "Defender",
+    "rating": 87,
+    "basePrice": 5.8
+  },
+  {
+    "name": "Lucas Hern\u00e1ndez",
+    "position": "Defender",
+    "rating": 89,
+    "basePrice": 4.2
+  },
+  {
+    "name": "David Alaba",
+    "position": "Defender",
+    "rating": 81,
+    "basePrice": 7.0
+  },
+  {
+    "name": "Rapha\u00ebl Varane",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 10.6
+  },
+  {
+    "name": "Dayot Upamecano",
+    "position": "Defender",
+    "rating": 71,
+    "basePrice": 6.2
+  },
+  {
+    "name": "Presnel Kimpembe",
+    "position": "Defender",
+    "rating": 94,
+    "basePrice": 5.5
+  },
+  {
+    "name": "Achraf Hakimi",
+    "position": "Defender",
+    "rating": 83,
+    "basePrice": 7.5
+  },
+  {
+    "name": "Ronald Ara\u00fajo",
+    "position": "Defender",
+    "rating": 72,
+    "basePrice": 8.8
+  },
+  {
+    "name": "Matthijs de Ligt",
+    "position": "Defender",
+    "rating": 70,
+    "basePrice": 5.3
+  },
+  {
+    "name": "Danilo",
+    "position": "Defender",
+    "rating": 77,
+    "basePrice": 11.8
+  },
+  {
+    "name": "Alessandro Bastoni",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 4.4
+  },
+  {
+    "name": "Aymeric Laporte",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 2.9
+  },
+  {
+    "name": "C\u00e9sar Azpilicueta",
+    "position": "Defender",
+    "rating": 89,
+    "basePrice": 11.9
+  },
+  {
+    "name": "Jules Kound\u00e9",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 2.5
+  },
+  {
+    "name": "Jules Kound\u00e9",
+    "position": "Defender",
+    "rating": 76,
+    "basePrice": 8.5
+  },
+  {
+    "name": "Denzel Dumfries",
+    "position": "Defender",
+    "rating": 98,
+    "basePrice": 7.5
+  },
+  {
+    "name": "Ronald Ara\u00fajo",
+    "position": "Defender",
+    "rating": 94,
+    "basePrice": 3.2
+  },
+  {
+    "name": "Jo\u00e3o Cancelo",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 9.2
+  },
+  {
+    "name": "Dayot Upamecano",
+    "position": "Defender",
+    "rating": 75,
+    "basePrice": 5.3
+  },
+  {
+    "name": "Lucas Paquet\u00e1",
+    "position": "Midfielder",
+    "rating": 76,
+    "basePrice": 10.7
+  },
+  {
+    "name": "Nicol\u00f2 Barella",
+    "position": "Midfielder",
+    "rating": 89,
+    "basePrice": 5.8
+  },
+  {
+    "name": "Youri Tielemans",
+    "position": "Midfielder",
+    "rating": 70,
+    "basePrice": 9.9
+  },
+  {
+    "name": "Leandro Paredes",
+    "position": "Midfielder",
+    "rating": 77,
+    "basePrice": 8.1
+  },
+  {
+    "name": "Gavi",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 13.0
+  },
+  {
+    "name": "Jude Bellingham",
+    "position": "Midfielder",
+    "rating": 89,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Luka Modri\u0107",
+    "position": "Midfielder",
+    "rating": 75,
+    "basePrice": 13.0
+  },
+  {
+    "name": "Joshua Kimmich",
+    "position": "Midfielder",
+    "rating": 78,
+    "basePrice": 5.2
+  },
+  {
+    "name": "Frenkie de Jong",
+    "position": "Midfielder",
+    "rating": 95,
+    "basePrice": 12.4
+  },
+  {
+    "name": "Thiago Alc\u00e2ntara",
+    "position": "Midfielder",
+    "rating": 80,
+    "basePrice": 4.6
+  },
+  {
+    "name": "James Maddison",
+    "position": "Midfielder",
+    "rating": 76,
+    "basePrice": 8.5
+  },
+  {
+    "name": "Martin \u00d8degaard",
+    "position": "Midfielder",
+    "rating": 72,
+    "basePrice": 3.8
+  },
+  {
+    "name": "Federico Valverde",
+    "position": "Midfielder",
+    "rating": 97,
+    "basePrice": 8.7
+  },
+  {
+    "name": "Nicol\u00f2 Barella",
+    "position": "Midfielder",
+    "rating": 90,
+    "basePrice": 4.1
+  },
+  {
+    "name": "Adrien Rabiot",
+    "position": "Midfielder",
+    "rating": 92,
+    "basePrice": 5.4
+  },
+  {
+    "name": "Bruno Fernandes",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 7.1
+  },
+  {
+    "name": "Frenkie de Jong",
+    "position": "Midfielder",
+    "rating": 97,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Thiago Alc\u00e2ntara",
+    "position": "Midfielder",
+    "rating": 73,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Toni Kroos",
+    "position": "Midfielder",
+    "rating": 89,
+    "basePrice": 10.8
+  },
+  {
+    "name": "Toni Kroos",
+    "position": "Midfielder",
+    "rating": 86,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Ilkay G\u00fcndogan",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 12.9
+  },
+  {
+    "name": "Sergej Milinkovi\u0107-Savi\u0107",
+    "position": "Midfielder",
+    "rating": 95,
+    "basePrice": 8.1
+  },
+  {
+    "name": "Mason Mount",
+    "position": "Midfielder",
+    "rating": 92,
+    "basePrice": 2.6
+  },
+  {
+    "name": "Piotr Zieli\u0144ski",
+    "position": "Midfielder",
+    "rating": 74,
+    "basePrice": 12.2
+  },
+  {
+    "name": "Mateo Kova\u010di\u0107",
+    "position": "Midfielder",
+    "rating": 71,
+    "basePrice": 9.2
+  },
+  {
+    "name": "Federico Valverde",
+    "position": "Midfielder",
+    "rating": 81,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Lucas Paquet\u00e1",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 8.8
+  },
+  {
+    "name": "Nicol\u00f2 Barella",
+    "position": "Midfielder",
+    "rating": 90,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Mason Mount",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 5.9
+  },
+  {
+    "name": "James Maddison",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Marco Verratti",
+    "position": "Midfielder",
+    "rating": 91,
+    "basePrice": 12.0
+  },
+  {
+    "name": "Frenkie de Jong",
+    "position": "Midfielder",
+    "rating": 93,
+    "basePrice": 3.6
+  },
+  {
+    "name": "Rodri",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 5.5
+  },
+  {
+    "name": "Bruno Fernandes",
+    "position": "Midfielder",
+    "rating": 76,
+    "basePrice": 7.6
+  },
+  {
+    "name": "Thiago Alc\u00e2ntara",
+    "position": "Midfielder",
+    "rating": 99,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Ilkay G\u00fcndogan",
+    "position": "Midfielder",
+    "rating": 84,
+    "basePrice": 8.5
+  },
+  {
+    "name": "Luka Modri\u0107",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 6.3
+  },
+  {
+    "name": "Pedri",
+    "position": "Midfielder",
+    "rating": 95,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Kevin De Bruyne",
+    "position": "Midfielder",
+    "rating": 91,
+    "basePrice": 7.0
+  },
+  {
+    "name": "Granit Xhaka",
+    "position": "Midfielder",
+    "rating": 70,
+    "basePrice": 4.9
+  },
+  {
+    "name": "Kevin De Bruyne",
+    "position": "Midfielder",
+    "rating": 96,
+    "basePrice": 7.3
+  },
+  {
+    "name": "Gavi",
+    "position": "Midfielder",
+    "rating": 74,
+    "basePrice": 12.3
+  },
+  {
+    "name": "Kevin De Bruyne",
+    "position": "Midfielder",
+    "rating": 89,
+    "basePrice": 5.7
+  },
+  {
+    "name": "Isma\u00ebl Bennacer",
+    "position": "Midfielder",
+    "rating": 72,
+    "basePrice": 6.2
+  },
+  {
+    "name": "Mateo Kova\u010di\u0107",
+    "position": "Midfielder",
+    "rating": 91,
+    "basePrice": 7.9
+  },
+  {
+    "name": "Jude Bellingham",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 7.1
+  },
+  {
+    "name": "Youri Tielemans",
+    "position": "Midfielder",
+    "rating": 83,
+    "basePrice": 11.5
+  },
+  {
+    "name": "Toni Kroos",
+    "position": "Midfielder",
+    "rating": 92,
+    "basePrice": 6.0
+  },
+  {
+    "name": "Bruno Fernandes",
+    "position": "Midfielder",
+    "rating": 99,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Joshua Kimmich",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 3.3
+  },
+  {
+    "name": "Isma\u00ebl Bennacer",
+    "position": "Midfielder",
+    "rating": 94,
+    "basePrice": 12.5
+  },
+  {
+    "name": "Adrien Rabiot",
+    "position": "Midfielder",
+    "rating": 84,
+    "basePrice": 6.9
+  },
+  {
+    "name": "Mateo Kova\u010di\u0107",
+    "position": "Midfielder",
+    "rating": 73,
+    "basePrice": 4.6
+  },
+  {
+    "name": "Leandro Paredes",
+    "position": "Midfielder",
+    "rating": 91,
+    "basePrice": 5.9
+  },
+  {
+    "name": "Declan Rice",
+    "position": "Midfielder",
+    "rating": 70,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Eduardo Camavinga",
+    "position": "Midfielder",
+    "rating": 99,
+    "basePrice": 3.1
+  },
+  {
+    "name": "Martin \u00d8degaard",
+    "position": "Midfielder",
+    "rating": 99,
+    "basePrice": 3.7
+  },
+  {
+    "name": "Martin \u00d8degaard",
+    "position": "Midfielder",
+    "rating": 93,
+    "basePrice": 11.4
+  },
+  {
+    "name": "Declan Rice",
+    "position": "Midfielder",
+    "rating": 96,
+    "basePrice": 12.8
+  },
+  {
+    "name": "Andr\u00e9s Iniesta",
+    "position": "Midfielder",
+    "rating": 78,
+    "basePrice": 9.2
+  },
+  {
+    "name": "Luka Modri\u0107",
+    "position": "Midfielder",
+    "rating": 75,
+    "basePrice": 10.5
+  },
+  {
+    "name": "Youri Tielemans",
+    "position": "Midfielder",
+    "rating": 73,
+    "basePrice": 6.4
+  },
+  {
+    "name": "Mason Mount",
+    "position": "Midfielder",
+    "rating": 80,
+    "basePrice": 4.7
+  },
+  {
+    "name": "Lucas Paquet\u00e1",
+    "position": "Midfielder",
+    "rating": 94,
+    "basePrice": 4.5
+  },
+  {
+    "name": "Gavi",
+    "position": "Midfielder",
+    "rating": 86,
+    "basePrice": 5.6
+  },
+  {
+    "name": "Rodri",
+    "position": "Midfielder",
+    "rating": 88,
+    "basePrice": 7.0
+  },
+  {
+    "name": "Eduardo Camavinga",
+    "position": "Midfielder",
+    "rating": 90,
+    "basePrice": 3.4
+  },
+  {
+    "name": "Rodri",
+    "position": "Midfielder",
+    "rating": 71,
+    "basePrice": 3.0
+  },
+  {
+    "name": "Andr\u00e9s Iniesta",
+    "position": "Midfielder",
+    "rating": 95,
+    "basePrice": 5.4
+  },
+  {
+    "name": "Marco Verratti",
+    "position": "Midfielder",
+    "rating": 80,
+    "basePrice": 12.0
+  },
+  {
+    "name": "Isma\u00ebl Bennacer",
+    "position": "Midfielder",
+    "rating": 90,
+    "basePrice": 10.2
+  },
+  {
+    "name": "Eduardo Camavinga",
+    "position": "Midfielder",
+    "rating": 80,
+    "basePrice": 3.5
+  },
+  {
+    "name": "Federico Valverde",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 3.0
+  },
+  {
+    "name": "Declan Rice",
+    "position": "Midfielder",
+    "rating": 73,
+    "basePrice": 3.0
+  },
+  {
+    "name": "James Maddison",
+    "position": "Midfielder",
+    "rating": 95,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Pedri",
+    "position": "Midfielder",
+    "rating": 88,
+    "basePrice": 11.6
+  },
+  {
+    "name": "Granit Xhaka",
+    "position": "Midfielder",
+    "rating": 86,
+    "basePrice": 10.5
+  },
+  {
+    "name": "Marco Verratti",
+    "position": "Midfielder",
+    "rating": 96,
+    "basePrice": 3.1
+  },
+  {
+    "name": "Granit Xhaka",
+    "position": "Midfielder",
+    "rating": 76,
+    "basePrice": 4.5
+  },
+  {
+    "name": "Piotr Zieli\u0144ski",
+    "position": "Midfielder",
+    "rating": 91,
+    "basePrice": 7.7
+  },
+  {
+    "name": "Ilkay G\u00fcndogan",
+    "position": "Midfielder",
+    "rating": 92,
+    "basePrice": 2.5
+  },
+  {
+    "name": "Adrien Rabiot",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 5.2
+  },
+  {
+    "name": "Jude Bellingham",
+    "position": "Midfielder",
+    "rating": 92,
+    "basePrice": 12.7
+  },
+  {
+    "name": "Sergej Milinkovi\u0107-Savi\u0107",
+    "position": "Midfielder",
+    "rating": 70,
+    "basePrice": 12.9
+  },
+  {
+    "name": "Piotr Zieli\u0144ski",
+    "position": "Midfielder",
+    "rating": 75,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Joshua Kimmich",
+    "position": "Midfielder",
+    "rating": 96,
+    "basePrice": 5.6
+  },
+  {
+    "name": "Leandro Paredes",
+    "position": "Midfielder",
+    "rating": 95,
+    "basePrice": 5.1
+  },
+  {
+    "name": "Andr\u00e9s Iniesta",
+    "position": "Midfielder",
+    "rating": 86,
+    "basePrice": 8.1
+  },
+  {
+    "name": "Pedri",
+    "position": "Midfielder",
+    "rating": 96,
+    "basePrice": 10.7
+  },
+  {
+    "name": "Sergej Milinkovi\u0107-Savi\u0107",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 7.5
+  },
+  {
+    "name": "Luis D\u00edaz",
+    "position": "Forward",
+    "rating": 95,
+    "basePrice": 7.3
+  },
+  {
+    "name": "Cody Gakpo",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 8.7
+  },
+  {
+    "name": "Mohamed Salah",
+    "position": "Forward",
+    "rating": 80,
+    "basePrice": 10.0
+  },
+  {
+    "name": "Lautaro Mart\u00ednez",
+    "position": "Forward",
+    "rating": 85,
+    "basePrice": 4.5
+  },
+  {
+    "name": "Vin\u00edcius J\u00fanior",
+    "position": "Forward",
+    "rating": 84,
+    "basePrice": 3.8
+  },
+  {
+    "name": "Kylian Mbapp\u00e9",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 3.2
+  },
+  {
+    "name": "Sadio Man\u00e9",
+    "position": "Forward",
+    "rating": 72,
+    "basePrice": 10.4
+  },
+  {
+    "name": "Erling Haaland",
+    "position": "Forward",
+    "rating": 88,
+    "basePrice": 11.7
+  },
+  {
+    "name": "Neymar Jr",
+    "position": "Forward",
+    "rating": 86,
+    "basePrice": 12.7
+  },
+  {
+    "name": "Gabriel Jesus",
+    "position": "Forward",
+    "rating": 72,
+    "basePrice": 7.6
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "position": "Forward",
+    "rating": 75,
+    "basePrice": 5.3
+  },
+  {
+    "name": "Sadio Man\u00e9",
+    "position": "Forward",
+    "rating": 78,
+    "basePrice": 8.1
+  },
+  {
+    "name": "Robert Lewandowski",
+    "position": "Forward",
+    "rating": 86,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Ousmane Demb\u00e9l\u00e9",
+    "position": "Forward",
+    "rating": 70,
+    "basePrice": 12.5
+  },
+  {
+    "name": "Jo\u00e3o F\u00e9lix",
+    "position": "Forward",
+    "rating": 98,
+    "basePrice": 11.4
+  },
+  {
+    "name": "Heung-min Son",
+    "position": "Forward",
+    "rating": 96,
+    "basePrice": 11.6
+  },
+  {
+    "name": "Mohamed Salah",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 12.0
+  },
+  {
+    "name": "Gabriel Jesus",
+    "position": "Forward",
+    "rating": 79,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Robert Lewandowski",
+    "position": "Forward",
+    "rating": 76,
+    "basePrice": 9.7
+  },
+  {
+    "name": "Riyad Mahrez",
+    "position": "Forward",
+    "rating": 71,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Luis D\u00edaz",
+    "position": "Forward",
+    "rating": 94,
+    "basePrice": 4.6
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 5.4
+  },
+  {
+    "name": "Harry Kane",
+    "position": "Forward",
+    "rating": 98,
+    "basePrice": 6.1
+  },
+  {
+    "name": "Jadon Sancho",
+    "position": "Forward",
+    "rating": 89,
+    "basePrice": 2.7
+  },
+  {
+    "name": "Heung-min Son",
+    "position": "Forward",
+    "rating": 73,
+    "basePrice": 12.9
+  },
+  {
+    "name": "Mohamed Salah",
+    "position": "Forward",
+    "rating": 95,
+    "basePrice": 4.5
+  },
+  {
+    "name": "Antoine Griezmann",
+    "position": "Forward",
+    "rating": 86,
+    "basePrice": 7.9
+  },
+  {
+    "name": "Marcus Rashford",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 4.6
+  },
+  {
+    "name": "\u00c1ngel Di Mar\u00eda",
+    "position": "Forward",
+    "rating": 70,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Karim Benzema",
+    "position": "Forward",
+    "rating": 75,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Rafael Le\u00e3o",
+    "position": "Forward",
+    "rating": 72,
+    "basePrice": 5.3
+  },
+  {
+    "name": "Riyad Mahrez",
+    "position": "Forward",
+    "rating": 76,
+    "basePrice": 4.1
+  },
+  {
+    "name": "Victor Osimhen",
+    "position": "Forward",
+    "rating": 94,
+    "basePrice": 4.8
+  },
+  {
+    "name": "Cody Gakpo",
+    "position": "Forward",
+    "rating": 94,
+    "basePrice": 3.9
+  },
+  {
+    "name": "Harry Kane",
+    "position": "Forward",
+    "rating": 88,
+    "basePrice": 12.4
+  },
+  {
+    "name": "Marcus Rashford",
+    "position": "Forward",
+    "rating": 75,
+    "basePrice": 9.5
+  },
+  {
+    "name": "Jadon Sancho",
+    "position": "Forward",
+    "rating": 92,
+    "basePrice": 4.6
+  },
+  {
+    "name": "\u00c1ngel Di Mar\u00eda",
+    "position": "Forward",
+    "rating": 85,
+    "basePrice": 3.9
+  },
+  {
+    "name": "Erling Haaland",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 8.9
+  },
+  {
+    "name": "Harry Kane",
+    "position": "Forward",
+    "rating": 92,
+    "basePrice": 4.9
+  },
+  {
+    "name": "Ousmane Demb\u00e9l\u00e9",
+    "position": "Forward",
+    "rating": 99,
+    "basePrice": 11.1
+  },
+  {
+    "name": "Rafael Le\u00e3o",
+    "position": "Forward",
+    "rating": 70,
+    "basePrice": 12.4
+  },
+  {
+    "name": "Phil Foden",
+    "position": "Forward",
+    "rating": 87,
+    "basePrice": 5.8
+  },
+  {
+    "name": "Lionel Messi",
+    "position": "Forward",
+    "rating": 91,
+    "basePrice": 4.7
+  },
+  {
+    "name": "Neymar Jr",
+    "position": "Forward",
+    "rating": 91,
+    "basePrice": 9.6
+  },
+  {
+    "name": "Antoine Griezmann",
+    "position": "Forward",
+    "rating": 71,
+    "basePrice": 11.0
+  },
+  {
+    "name": "Kylian Mbapp\u00e9",
+    "position": "Forward",
+    "rating": 91,
+    "basePrice": 6.5
+  },
+  {
+    "name": "Darwin N\u00fa\u00f1ez",
+    "position": "Forward",
+    "rating": 73,
+    "basePrice": 10.1
+  },
+  {
+    "name": "Rafael Le\u00e3o",
+    "position": "Forward",
+    "rating": 82,
+    "basePrice": 10.1
+  },
+  {
+    "name": "Neymar Jr",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 8.3
+  },
+  {
+    "name": "Darwin N\u00fa\u00f1ez",
+    "position": "Forward",
+    "rating": 88,
+    "basePrice": 8.7
+  },
+  {
+    "name": "Darwin N\u00fa\u00f1ez",
+    "position": "Forward",
+    "rating": 72,
+    "basePrice": 2.9
+  },
+  {
+    "name": "Victor Osimhen",
+    "position": "Forward",
+    "rating": 96,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Bukayo Saka",
+    "position": "Forward",
+    "rating": 86,
+    "basePrice": 2.8
+  },
+  {
+    "name": "Gabriel Jesus",
+    "position": "Forward",
+    "rating": 94,
+    "basePrice": 4.6
+  },
+  {
+    "name": "Antoine Griezmann",
+    "position": "Forward",
+    "rating": 80,
+    "basePrice": 11.7
+  },
+  {
+    "name": "Marcus Rashford",
+    "position": "Forward",
+    "rating": 81,
+    "basePrice": 3.2
+  },
+  {
+    "name": "Phil Foden",
+    "position": "Forward",
+    "rating": 99,
+    "basePrice": 5.7
+  },
+  {
+    "name": "Dusan Vlahovi\u0107",
+    "position": "Forward",
+    "rating": 72,
+    "basePrice": 9.0
+  },
+  {
+    "name": "Vin\u00edcius J\u00fanior",
+    "position": "Forward",
+    "rating": 97,
+    "basePrice": 8.1
+  },
+  {
+    "name": "Kylian Mbapp\u00e9",
+    "position": "Forward",
+    "rating": 82,
+    "basePrice": 5.9
+  },
+  {
+    "name": "Christopher Nkunku",
+    "position": "Forward",
+    "rating": 89,
+    "basePrice": 3.8
+  },
+  {
+    "name": "Erling Haaland",
+    "position": "Forward",
+    "rating": 70,
+    "basePrice": 9.5
+  },
+  {
+    "name": "Victor Osimhen",
+    "position": "Forward",
+    "rating": 76,
+    "basePrice": 9.0
+  },
+  {
+    "name": "Vin\u00edcius J\u00fanior",
+    "position": "Forward",
+    "rating": 94,
+    "basePrice": 6.1
+  },
+  {
+    "name": "Dusan Vlahovi\u0107",
+    "position": "Forward",
+    "rating": 72,
+    "basePrice": 10.2
+  },
+  {
+    "name": "Jadon Sancho",
+    "position": "Forward",
+    "rating": 96,
+    "basePrice": 7.6
+  },
+  {
+    "name": "Lautaro Mart\u00ednez",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Heung-min Son",
+    "position": "Forward",
+    "rating": 93,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Sadio Man\u00e9",
+    "position": "Forward",
+    "rating": 95,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Luis D\u00edaz",
+    "position": "Forward",
+    "rating": 78,
+    "basePrice": 3.5
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "position": "Forward",
+    "rating": 75,
+    "basePrice": 11.1
+  },
+  {
+    "name": "Lautaro Mart\u00ednez",
+    "position": "Forward",
+    "rating": 92,
+    "basePrice": 3.2
+  },
+  {
+    "name": "\u00c1ngel Di Mar\u00eda",
+    "position": "Forward",
+    "rating": 86,
+    "basePrice": 11.4
+  },
+  {
+    "name": "Bukayo Saka",
+    "position": "Forward",
+    "rating": 84,
+    "basePrice": 12.4
+  },
+  {
+    "name": "Karim Benzema",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 6.3
+  },
+  {
+    "name": "Phil Foden",
+    "position": "Forward",
+    "rating": 89,
+    "basePrice": 8.3
+  },
+  {
+    "name": "Bukayo Saka",
+    "position": "Forward",
+    "rating": 96,
+    "basePrice": 5.9
+  },
+  {
+    "name": "Lionel Messi",
+    "position": "Forward",
+    "rating": 80,
+    "basePrice": 11.8
+  },
+  {
+    "name": "Riyad Mahrez",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 11.0
+  },
+  {
+    "name": "Christopher Nkunku",
+    "position": "Forward",
+    "rating": 79,
+    "basePrice": 4.2
+  },
+  {
+    "name": "Christopher Nkunku",
+    "position": "Forward",
+    "rating": 86,
+    "basePrice": 12.7
+  },
+  {
+    "name": "Ousmane Demb\u00e9l\u00e9",
+    "position": "Forward",
+    "rating": 94,
+    "basePrice": 4.1
+  },
+  {
+    "name": "Dusan Vlahovi\u0107",
+    "position": "Forward",
+    "rating": 72,
+    "basePrice": 4.6
+  },
+  {
+    "name": "Jo\u00e3o F\u00e9lix",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 5.7
+  },
+  {
+    "name": "Karim Benzema",
+    "position": "Forward",
+    "rating": 85,
+    "basePrice": 2.7
+  },
+  {
+    "name": "Cody Gakpo",
+    "position": "Forward",
+    "rating": 95,
+    "basePrice": 7.8
+  },
+  {
+    "name": "Robert Lewandowski",
+    "position": "Forward",
+    "rating": 74,
+    "basePrice": 6.3
+  },
+  {
+    "name": "Lionel Messi",
+    "position": "Forward",
+    "rating": 85,
+    "basePrice": 5.7
+  },
+  {
+    "name": "Jo\u00e3o F\u00e9lix",
+    "position": "Forward",
+    "rating": 92,
+    "basePrice": 9.5
+  }
+]

@@ -1,0 +1,1802 @@
+[
+  {
+    "name": "Alejandro Price",
+    "position": "Forward",
+    "rating": 68,
+    "basePrice": 9.2
+  },
+  {
+    "name": "Shelley Runte PhD",
+    "position": "Defender",
+    "rating": 80,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Velma Conroy",
+    "position": "Midfielder",
+    "rating": 82,
+    "basePrice": 11.8
+  },
+  {
+    "name": "Dr. Neal Robel",
+    "position": "Defender",
+    "rating": 77,
+    "basePrice": 15
+  },
+  {
+    "name": "Delbert Feest",
+    "position": "Defender",
+    "rating": 63,
+    "basePrice": 7.8
+  },
+  {
+    "name": "Miss Felicia Mraz",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 13.6
+  },
+  {
+    "name": "Lucas Ryan",
+    "position": "Defender",
+    "rating": 82,
+    "basePrice": 14.2
+  },
+  {
+    "name": "Felix Langworth",
+    "position": "Midfielder",
+    "rating": 60,
+    "basePrice": 10.2
+  },
+  {
+    "name": "Virginia Witting",
+    "position": "Defender",
+    "rating": 80,
+    "basePrice": 14.8
+  },
+  {
+    "name": "Eva Champlin",
+    "position": "Defender",
+    "rating": 71,
+    "basePrice": 11.7
+  },
+  {
+    "name": "Anne Schneider DVM",
+    "position": "Defender",
+    "rating": 65,
+    "basePrice": 9.5
+  },
+  {
+    "name": "Santos Jacobi-Franecki",
+    "position": "Midfielder",
+    "rating": 73,
+    "basePrice": 7.9
+  },
+  {
+    "name": "Kari Rice",
+    "position": "Defender",
+    "rating": 74,
+    "basePrice": 14.7
+  },
+  {
+    "name": "Miss Bertha Hessel",
+    "position": "Defender",
+    "rating": 68,
+    "basePrice": 7.8
+  },
+  {
+    "name": "Olivia Halvorson PhD",
+    "position": "Defender",
+    "rating": 66,
+    "basePrice": 12.1
+  },
+  {
+    "name": "Kristina Sawayn",
+    "position": "Defender",
+    "rating": 70,
+    "basePrice": 13.2
+  },
+  {
+    "name": "Gretchen Schulist",
+    "position": "Defender",
+    "rating": 86,
+    "basePrice": 9.2
+  },
+  {
+    "name": "Greg Mueller",
+    "position": "Goalkeeper",
+    "rating": 88,
+    "basePrice": 14.1
+  },
+  {
+    "name": "Kristin Wiza",
+    "position": "Midfielder",
+    "rating": 85,
+    "basePrice": 14.4
+  },
+  {
+    "name": "Johanna Kling",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 12.1
+  },
+  {
+    "name": "Christy Gibson-Bauch",
+    "position": "Goalkeeper",
+    "rating": 90,
+    "basePrice": 9.1
+  },
+  {
+    "name": "Evan Grant",
+    "position": "Goalkeeper",
+    "rating": 66,
+    "basePrice": 12.7
+  },
+  {
+    "name": "Leigh Farrell",
+    "position": "Defender",
+    "rating": 86,
+    "basePrice": 16
+  },
+  {
+    "name": "Gene Muller Sr.",
+    "position": "Defender",
+    "rating": 81,
+    "basePrice": 9.2
+  },
+  {
+    "name": "Calvin Cartwright",
+    "position": "Defender",
+    "rating": 72,
+    "basePrice": 11.4
+  },
+  {
+    "name": "Gayle Rohan",
+    "position": "Defender",
+    "rating": 75,
+    "basePrice": 12.4
+  },
+  {
+    "name": "Dr. Lee Dickens",
+    "position": "Midfielder",
+    "rating": 65,
+    "basePrice": 10.2
+  },
+  {
+    "name": "Carlos Nicolas",
+    "position": "Defender",
+    "rating": 70,
+    "basePrice": 11.9
+  },
+  {
+    "name": "Blanca Ebert-Emmerich",
+    "position": "Goalkeeper",
+    "rating": 86,
+    "basePrice": 9.1
+  },
+  {
+    "name": "Dwight Bauch",
+    "position": "Goalkeeper",
+    "rating": 68,
+    "basePrice": 12.8
+  },
+  {
+    "name": "Alfonso Robel",
+    "position": "Midfielder",
+    "rating": 77,
+    "basePrice": 14.8
+  },
+  {
+    "name": "Cody Blanda",
+    "position": "Goalkeeper",
+    "rating": 84,
+    "basePrice": 10.9
+  },
+  {
+    "name": "Brandon DuBuque",
+    "position": "Defender",
+    "rating": 61,
+    "basePrice": 8.5
+  },
+  {
+    "name": "Freda Murazik",
+    "position": "Goalkeeper",
+    "rating": 90,
+    "basePrice": 13.1
+  },
+  {
+    "name": "Mr. Dustin Hintz",
+    "position": "Midfielder",
+    "rating": 82,
+    "basePrice": 12.5
+  },
+  {
+    "name": "Tonya Farrell",
+    "position": "Midfielder",
+    "rating": 86,
+    "basePrice": 12.8
+  },
+  {
+    "name": "Danny Conroy-Fay",
+    "position": "Defender",
+    "rating": 78,
+    "basePrice": 12.5
+  },
+  {
+    "name": "Jessie Armstrong",
+    "position": "Midfielder",
+    "rating": 90,
+    "basePrice": 14.9
+  },
+  {
+    "name": "Matthew Mante",
+    "position": "Forward",
+    "rating": 65,
+    "basePrice": 7.6
+  },
+  {
+    "name": "Dr. Wayne Wyman",
+    "position": "Goalkeeper",
+    "rating": 77,
+    "basePrice": 14.3
+  },
+  {
+    "name": "Corey Wyman",
+    "position": "Defender",
+    "rating": 79,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Guy Douglas",
+    "position": "Defender",
+    "rating": 71,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Marc Bogan",
+    "position": "Midfielder",
+    "rating": 82,
+    "basePrice": 13.6
+  },
+  {
+    "name": "Jimmy Farrell",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Drew Bruen",
+    "position": "Goalkeeper",
+    "rating": 79,
+    "basePrice": 8.3
+  },
+  {
+    "name": "Dr. Blake Kutch III",
+    "position": "Forward",
+    "rating": 60,
+    "basePrice": 10.7
+  },
+  {
+    "name": "Geneva Aufderhar",
+    "position": "Forward",
+    "rating": 63,
+    "basePrice": 7.2
+  },
+  {
+    "name": "Isabel Robel",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 17.2
+  },
+  {
+    "name": "Jody Conn PhD",
+    "position": "Forward",
+    "rating": 87,
+    "basePrice": 15
+  },
+  {
+    "name": "Gladys Lind",
+    "position": "Midfielder",
+    "rating": 72,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Tonya Parisian",
+    "position": "Forward",
+    "rating": 81,
+    "basePrice": 14.8
+  },
+  {
+    "name": "Julia Schinner",
+    "position": "Forward",
+    "rating": 64,
+    "basePrice": 12.8
+  },
+  {
+    "name": "Casey Schaefer",
+    "position": "Defender",
+    "rating": 89,
+    "basePrice": 13.5
+  },
+  {
+    "name": "Michelle Stamm",
+    "position": "Defender",
+    "rating": 83,
+    "basePrice": 9.7
+  },
+  {
+    "name": "Jamie Cole",
+    "position": "Forward",
+    "rating": 82,
+    "basePrice": 15.6
+  },
+  {
+    "name": "Bernice Corkery",
+    "position": "Midfielder",
+    "rating": 65,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Warren Auer",
+    "position": "Goalkeeper",
+    "rating": 64,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Kim Kovacek",
+    "position": "Midfielder",
+    "rating": 60,
+    "basePrice": 6.7
+  },
+  {
+    "name": "Jon Kertzmann",
+    "position": "Forward",
+    "rating": 79,
+    "basePrice": 13
+  },
+  {
+    "name": "Alejandro Bahringer",
+    "position": "Midfielder",
+    "rating": 64,
+    "basePrice": 12.3
+  },
+  {
+    "name": "Christopher Rutherford",
+    "position": "Defender",
+    "rating": 61,
+    "basePrice": 11.5
+  },
+  {
+    "name": "Veronica Turcotte",
+    "position": "Forward",
+    "rating": 62,
+    "basePrice": 7.5
+  },
+  {
+    "name": "Ross Tillman",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Owen Kerluke MD",
+    "position": "Midfielder",
+    "rating": 85,
+    "basePrice": 15.8
+  },
+  {
+    "name": "Julie Herman",
+    "position": "Defender",
+    "rating": 73,
+    "basePrice": 7.5
+  },
+  {
+    "name": "Vickie DuBuque",
+    "position": "Defender",
+    "rating": 68,
+    "basePrice": 11.8
+  },
+  {
+    "name": "Francis Walsh DDS",
+    "position": "Goalkeeper",
+    "rating": 69,
+    "basePrice": 11.5
+  },
+  {
+    "name": "Alice Metz",
+    "position": "Midfielder",
+    "rating": 64,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Casey Stanton",
+    "position": "Goalkeeper",
+    "rating": 60,
+    "basePrice": 8
+  },
+  {
+    "name": "Doris Bailey",
+    "position": "Goalkeeper",
+    "rating": 74,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Denise Wolf",
+    "position": "Goalkeeper",
+    "rating": 71,
+    "basePrice": 12.5
+  },
+  {
+    "name": "Dr. Justin Kuphal",
+    "position": "Forward",
+    "rating": 82,
+    "basePrice": 16.3
+  },
+  {
+    "name": "Miss Debbie Weissnat",
+    "position": "Forward",
+    "rating": 66,
+    "basePrice": 9.7
+  },
+  {
+    "name": "Ann Beatty-Price",
+    "position": "Forward",
+    "rating": 75,
+    "basePrice": 10.7
+  },
+  {
+    "name": "Erica Jacobi",
+    "position": "Goalkeeper",
+    "rating": 80,
+    "basePrice": 9.8
+  },
+  {
+    "name": "Bernard Ritchie I",
+    "position": "Forward",
+    "rating": 82,
+    "basePrice": 15.7
+  },
+  {
+    "name": "Lindsey Schmitt",
+    "position": "Midfielder",
+    "rating": 61,
+    "basePrice": 11.9
+  },
+  {
+    "name": "Molly Beier",
+    "position": "Defender",
+    "rating": 84,
+    "basePrice": 15.6
+  },
+  {
+    "name": "Mr. Harvey Farrell",
+    "position": "Forward",
+    "rating": 75,
+    "basePrice": 13.2
+  },
+  {
+    "name": "Angel Borer",
+    "position": "Midfielder",
+    "rating": 83,
+    "basePrice": 8.7
+  },
+  {
+    "name": "Rosemarie Nitzsche",
+    "position": "Midfielder",
+    "rating": 74,
+    "basePrice": 10.8
+  },
+  {
+    "name": "Christina Balistreri",
+    "position": "Defender",
+    "rating": 69,
+    "basePrice": 11.8
+  },
+  {
+    "name": "Jonathan Gleason",
+    "position": "Defender",
+    "rating": 83,
+    "basePrice": 15.1
+  },
+  {
+    "name": "Andy Wisoky-Rippin",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 9.5
+  },
+  {
+    "name": "Dr. Melody O'Kon",
+    "position": "Midfielder",
+    "rating": 85,
+    "basePrice": 13.8
+  },
+  {
+    "name": "Sally Gibson",
+    "position": "Forward",
+    "rating": 74,
+    "basePrice": 10
+  },
+  {
+    "name": "Nellie Schiller",
+    "position": "Forward",
+    "rating": 60,
+    "basePrice": 11.6
+  },
+  {
+    "name": "Renee Trantow",
+    "position": "Forward",
+    "rating": 61,
+    "basePrice": 8
+  },
+  {
+    "name": "Ms. Felicia Haley",
+    "position": "Midfielder",
+    "rating": 73,
+    "basePrice": 9.8
+  },
+  {
+    "name": "Tyler Powlowski-Yundt",
+    "position": "Defender",
+    "rating": 66,
+    "basePrice": 9.5
+  },
+  {
+    "name": "Kristen Fay",
+    "position": "Forward",
+    "rating": 89,
+    "basePrice": 11.6
+  },
+  {
+    "name": "Micheal McGlynn",
+    "position": "Forward",
+    "rating": 72,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Darrel Ziemann",
+    "position": "Midfielder",
+    "rating": 69,
+    "basePrice": 13.8
+  },
+  {
+    "name": "Tanya Rutherford DVM",
+    "position": "Forward",
+    "rating": 65,
+    "basePrice": 7.9
+  },
+  {
+    "name": "Tracy Mertz",
+    "position": "Midfielder",
+    "rating": 62,
+    "basePrice": 12
+  },
+  {
+    "name": "Kirk Bechtelar",
+    "position": "Defender",
+    "rating": 60,
+    "basePrice": 9.1
+  },
+  {
+    "name": "Alfred Cummings",
+    "position": "Midfielder",
+    "rating": 81,
+    "basePrice": 8.3
+  },
+  {
+    "name": "Bobbie Deckow",
+    "position": "Forward",
+    "rating": 62,
+    "basePrice": 6.5
+  },
+  {
+    "name": "Gina Feest",
+    "position": "Goalkeeper",
+    "rating": 86,
+    "basePrice": 16.2
+  },
+  {
+    "name": "Amos Cole",
+    "position": "Forward",
+    "rating": 71,
+    "basePrice": 13.6
+  },
+  {
+    "name": "Renee Rohan-Effertz",
+    "position": "Midfielder",
+    "rating": 66,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Tracy Homenick",
+    "position": "Forward",
+    "rating": 65,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Blanche Cremin",
+    "position": "Midfielder",
+    "rating": 70,
+    "basePrice": 7.8
+  },
+  {
+    "name": "Derek Denesik Jr.",
+    "position": "Midfielder",
+    "rating": 77,
+    "basePrice": 8.1
+  },
+  {
+    "name": "Darnell Mills",
+    "position": "Midfielder",
+    "rating": 75,
+    "basePrice": 14.5
+  },
+  {
+    "name": "Desiree King I",
+    "position": "Defender",
+    "rating": 65,
+    "basePrice": 9.1
+  },
+  {
+    "name": "Stewart Rogahn",
+    "position": "Defender",
+    "rating": 84,
+    "basePrice": 16.4
+  },
+  {
+    "name": "Lola Dooley",
+    "position": "Goalkeeper",
+    "rating": 61,
+    "basePrice": 6.4
+  },
+  {
+    "name": "Timothy Gutmann",
+    "position": "Midfielder",
+    "rating": 70,
+    "basePrice": 11
+  },
+  {
+    "name": "Jessie Funk",
+    "position": "Forward",
+    "rating": 90,
+    "basePrice": 14.3
+  },
+  {
+    "name": "Christie Stoltenberg",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 14.9
+  },
+  {
+    "name": "Mack Kohler",
+    "position": "Midfielder",
+    "rating": 88,
+    "basePrice": 11.4
+  },
+  {
+    "name": "Kristie Osinski Sr.",
+    "position": "Forward",
+    "rating": 77,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Tyrone Stracke",
+    "position": "Forward",
+    "rating": 82,
+    "basePrice": 16.1
+  },
+  {
+    "name": "Dianne Mante",
+    "position": "Forward",
+    "rating": 76,
+    "basePrice": 11.8
+  },
+  {
+    "name": "Ms. Jaime Kub",
+    "position": "Midfielder",
+    "rating": 66,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Rolando Jacobson",
+    "position": "Defender",
+    "rating": 77,
+    "basePrice": 13.2
+  },
+  {
+    "name": "Leonard O'Reilly",
+    "position": "Defender",
+    "rating": 85,
+    "basePrice": 10.6
+  },
+  {
+    "name": "Jared Conn",
+    "position": "Goalkeeper",
+    "rating": 74,
+    "basePrice": 9.7
+  },
+  {
+    "name": "Larry Cassin",
+    "position": "Goalkeeper",
+    "rating": 76,
+    "basePrice": 13.2
+  },
+  {
+    "name": "Blanca Heathcote",
+    "position": "Goalkeeper",
+    "rating": 62,
+    "basePrice": 9.9
+  },
+  {
+    "name": "Ella Toy",
+    "position": "Forward",
+    "rating": 78,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Ms. Bertha Tillman",
+    "position": "Defender",
+    "rating": 80,
+    "basePrice": 14.5
+  },
+  {
+    "name": "Dr. Dale Lueilwitz",
+    "position": "Midfielder",
+    "rating": 68,
+    "basePrice": 10.4
+  },
+  {
+    "name": "Deanna Grimes",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 12.5
+  },
+  {
+    "name": "Nathan Rodriguez",
+    "position": "Forward",
+    "rating": 67,
+    "basePrice": 7
+  },
+  {
+    "name": "Rudy Hoppe",
+    "position": "Midfielder",
+    "rating": 88,
+    "basePrice": 16.6
+  },
+  {
+    "name": "Alejandro McLaughlin",
+    "position": "Defender",
+    "rating": 81,
+    "basePrice": 15.2
+  },
+  {
+    "name": "Leticia Deckow",
+    "position": "Midfielder",
+    "rating": 63,
+    "basePrice": 6.8
+  },
+  {
+    "name": "Vicky Towne",
+    "position": "Forward",
+    "rating": 78,
+    "basePrice": 13.2
+  },
+  {
+    "name": "Roy Glover",
+    "position": "Midfielder",
+    "rating": 89,
+    "basePrice": 17.8
+  },
+  {
+    "name": "Julian Marquardt I",
+    "position": "Midfielder",
+    "rating": 84,
+    "basePrice": 15.6
+  },
+  {
+    "name": "Rodolfo Herman",
+    "position": "Midfielder",
+    "rating": 78,
+    "basePrice": 9.3
+  },
+  {
+    "name": "Inez Ritchie",
+    "position": "Forward",
+    "rating": 73,
+    "basePrice": 12.9
+  },
+  {
+    "name": "Tommy Brakus",
+    "position": "Midfielder",
+    "rating": 75,
+    "basePrice": 7.6
+  },
+  {
+    "name": "Wilson Gleason",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 10.4
+  },
+  {
+    "name": "Dr. Jonathon Rath",
+    "position": "Forward",
+    "rating": 63,
+    "basePrice": 6.8
+  },
+  {
+    "name": "Nancy Kuhic",
+    "position": "Goalkeeper",
+    "rating": 75,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Alexandra Jacobs",
+    "position": "Defender",
+    "rating": 76,
+    "basePrice": 11.5
+  },
+  {
+    "name": "Ramona Brown",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 11.1
+  },
+  {
+    "name": "Jan Hessel",
+    "position": "Defender",
+    "rating": 89,
+    "basePrice": 15.9
+  },
+  {
+    "name": "Benny Rolfson",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 15.7
+  },
+  {
+    "name": "Madeline Morissette",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 15.1
+  },
+  {
+    "name": "Matthew Stiedemann",
+    "position": "Midfielder",
+    "rating": 76,
+    "basePrice": 8.7
+  },
+  {
+    "name": "Jeanne White",
+    "position": "Forward",
+    "rating": 87,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Maggie Spencer",
+    "position": "Forward",
+    "rating": 79,
+    "basePrice": 13.1
+  },
+  {
+    "name": "Vanessa Lindgren",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 16.7
+  },
+  {
+    "name": "Mr. Randy Huels",
+    "position": "Defender",
+    "rating": 87,
+    "basePrice": 8.8
+  },
+  {
+    "name": "Rolando Raynor III",
+    "position": "Defender",
+    "rating": 78,
+    "basePrice": 14
+  },
+  {
+    "name": "Mr. Charles Zemlak",
+    "position": "Forward",
+    "rating": 60,
+    "basePrice": 9.7
+  },
+  {
+    "name": "Krista Miller",
+    "position": "Forward",
+    "rating": 67,
+    "basePrice": 6.7
+  },
+  {
+    "name": "Elijah Hills",
+    "position": "Defender",
+    "rating": 61,
+    "basePrice": 7.6
+  },
+  {
+    "name": "Willis VonRueden",
+    "position": "Forward",
+    "rating": 74,
+    "basePrice": 9.7
+  },
+  {
+    "name": "Mr. Alexander Hilpert Jr.",
+    "position": "Forward",
+    "rating": 60,
+    "basePrice": 6.9
+  },
+  {
+    "name": "Omar Gibson",
+    "position": "Midfielder",
+    "rating": 90,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Ella Weber",
+    "position": "Forward",
+    "rating": 74,
+    "basePrice": 8.9
+  },
+  {
+    "name": "Stanley Koch",
+    "position": "Midfielder",
+    "rating": 71,
+    "basePrice": 13.8
+  },
+  {
+    "name": "Bob Koelpin",
+    "position": "Forward",
+    "rating": 81,
+    "basePrice": 8.3
+  },
+  {
+    "name": "Raul Considine",
+    "position": "Defender",
+    "rating": 89,
+    "basePrice": 14
+  },
+  {
+    "name": "Marjorie Turner",
+    "position": "Midfielder",
+    "rating": 64,
+    "basePrice": 12.2
+  },
+  {
+    "name": "Delores Littel",
+    "position": "Goalkeeper",
+    "rating": 79,
+    "basePrice": 15.4
+  },
+  {
+    "name": "Earnest Koelpin",
+    "position": "Defender",
+    "rating": 74,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Krystal Reynolds",
+    "position": "Midfielder",
+    "rating": 68,
+    "basePrice": 11.6
+  },
+  {
+    "name": "Mitchell Denesik",
+    "position": "Defender",
+    "rating": 76,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Clark Weber",
+    "position": "Defender",
+    "rating": 81,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Dr. Earnest Durgan I",
+    "position": "Goalkeeper",
+    "rating": 88,
+    "basePrice": 12
+  },
+  {
+    "name": "Sheldon Gerlach",
+    "position": "Defender",
+    "rating": 64,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Melissa Hamill",
+    "position": "Defender",
+    "rating": 78,
+    "basePrice": 9.8
+  },
+  {
+    "name": "Rachael Haag",
+    "position": "Midfielder",
+    "rating": 79,
+    "basePrice": 8.5
+  },
+  {
+    "name": "Seth Kunde",
+    "position": "Goalkeeper",
+    "rating": 69,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Delbert Schinner",
+    "position": "Defender",
+    "rating": 80,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Ramona Lueilwitz",
+    "position": "Goalkeeper",
+    "rating": 62,
+    "basePrice": 12.2
+  },
+  {
+    "name": "Nancy Altenwerth",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 17.5
+  },
+  {
+    "name": "Betsy Rau",
+    "position": "Forward",
+    "rating": 70,
+    "basePrice": 12.2
+  },
+  {
+    "name": "Johnny Steuber",
+    "position": "Midfielder",
+    "rating": 61,
+    "basePrice": 10.1
+  },
+  {
+    "name": "Jack Murray",
+    "position": "Goalkeeper",
+    "rating": 87,
+    "basePrice": 16.1
+  },
+  {
+    "name": "Homer Ritchie PhD",
+    "position": "Forward",
+    "rating": 79,
+    "basePrice": 9.7
+  },
+  {
+    "name": "Leland Will",
+    "position": "Forward",
+    "rating": 60,
+    "basePrice": 7.6
+  },
+  {
+    "name": "Sammy Ortiz PhD",
+    "position": "Forward",
+    "rating": 78,
+    "basePrice": 14.8
+  },
+  {
+    "name": "Mr. Dustin Mitchell",
+    "position": "Midfielder",
+    "rating": 89,
+    "basePrice": 13.6
+  },
+  {
+    "name": "Mary Stamm",
+    "position": "Midfielder",
+    "rating": 82,
+    "basePrice": 13.2
+  },
+  {
+    "name": "Terence Howell",
+    "position": "Forward",
+    "rating": 85,
+    "basePrice": 12.3
+  },
+  {
+    "name": "Leticia Stroman",
+    "position": "Defender",
+    "rating": 75,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Kurt Orn PhD",
+    "position": "Forward",
+    "rating": 68,
+    "basePrice": 11.1
+  },
+  {
+    "name": "Cary Armstrong",
+    "position": "Midfielder",
+    "rating": 65,
+    "basePrice": 10.7
+  },
+  {
+    "name": "Orville Klein",
+    "position": "Forward",
+    "rating": 79,
+    "basePrice": 14.4
+  },
+  {
+    "name": "Andre Wilderman",
+    "position": "Defender",
+    "rating": 78,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Clinton D'Amore",
+    "position": "Forward",
+    "rating": 67,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Rudolph Jones",
+    "position": "Defender",
+    "rating": 60,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Susan Green",
+    "position": "Goalkeeper",
+    "rating": 80,
+    "basePrice": 8.8
+  },
+  {
+    "name": "Sherman Turcotte",
+    "position": "Midfielder",
+    "rating": 77,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Dana Funk",
+    "position": "Forward",
+    "rating": 84,
+    "basePrice": 9
+  },
+  {
+    "name": "Dr. Melvin Metz",
+    "position": "Midfielder",
+    "rating": 65,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Dr. Steve Mosciski",
+    "position": "Midfielder",
+    "rating": 62,
+    "basePrice": 10.6
+  },
+  {
+    "name": "Ashley Schneider",
+    "position": "Defender",
+    "rating": 76,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Derrick Strosin",
+    "position": "Forward",
+    "rating": 68,
+    "basePrice": 12.4
+  },
+  {
+    "name": "Brandon Crona",
+    "position": "Forward",
+    "rating": 64,
+    "basePrice": 10.2
+  },
+  {
+    "name": "Marco Lehner",
+    "position": "Goalkeeper",
+    "rating": 85,
+    "basePrice": 8.8
+  },
+  {
+    "name": "Henry Bednar",
+    "position": "Midfielder",
+    "rating": 66,
+    "basePrice": 12.8
+  },
+  {
+    "name": "Dr. Colin Kertzmann",
+    "position": "Goalkeeper",
+    "rating": 71,
+    "basePrice": 10.8
+  },
+  {
+    "name": "Nadine Witting",
+    "position": "Defender",
+    "rating": 60,
+    "basePrice": 7.9
+  },
+  {
+    "name": "Joan Daugherty",
+    "position": "Defender",
+    "rating": 75,
+    "basePrice": 12.8
+  },
+  {
+    "name": "Jasmine Lind III",
+    "position": "Midfielder",
+    "rating": 66,
+    "basePrice": 10.5
+  },
+  {
+    "name": "Pamela Christiansen",
+    "position": "Forward",
+    "rating": 62,
+    "basePrice": 10.9
+  },
+  {
+    "name": "Wilbur Schulist",
+    "position": "Goalkeeper",
+    "rating": 63,
+    "basePrice": 8.3
+  },
+  {
+    "name": "Ms. Mona Klocko",
+    "position": "Midfielder",
+    "rating": 77,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Kari Huel",
+    "position": "Midfielder",
+    "rating": 71,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Bert Crist",
+    "position": "Forward",
+    "rating": 60,
+    "basePrice": 8
+  },
+  {
+    "name": "Gabriel VonRueden-Emard",
+    "position": "Forward",
+    "rating": 69,
+    "basePrice": 13
+  },
+  {
+    "name": "Robin Kilback DDS",
+    "position": "Midfielder",
+    "rating": 67,
+    "basePrice": 13.2
+  },
+  {
+    "name": "Wade Spencer",
+    "position": "Forward",
+    "rating": 77,
+    "basePrice": 14.7
+  },
+  {
+    "name": "Dr. Kurt Schulist",
+    "position": "Forward",
+    "rating": 73,
+    "basePrice": 9.8
+  },
+  {
+    "name": "Chelsea Towne",
+    "position": "Goalkeeper",
+    "rating": 83,
+    "basePrice": 15.2
+  },
+  {
+    "name": "Ms. Lila Schmidt",
+    "position": "Defender",
+    "rating": 69,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Orlando Jast-Franecki",
+    "position": "Defender",
+    "rating": 67,
+    "basePrice": 11.4
+  },
+  {
+    "name": "Faith Gleason",
+    "position": "Midfielder",
+    "rating": 60,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Marcos Emmerich",
+    "position": "Forward",
+    "rating": 89,
+    "basePrice": 14.9
+  },
+  {
+    "name": "Gustavo McGlynn",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 14.7
+  },
+  {
+    "name": "Gilbert Lynch I",
+    "position": "Forward",
+    "rating": 88,
+    "basePrice": 15.8
+  },
+  {
+    "name": "Irvin Rath",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 17.5
+  },
+  {
+    "name": "Carrie Marks V",
+    "position": "Midfielder",
+    "rating": 63,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Cecelia Volkman PhD",
+    "position": "Forward",
+    "rating": 80,
+    "basePrice": 13.5
+  },
+  {
+    "name": "Miss Phyllis Cummings",
+    "position": "Defender",
+    "rating": 76,
+    "basePrice": 12.8
+  },
+  {
+    "name": "Roosevelt Bailey",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 12.7
+  },
+  {
+    "name": "Mrs. Victoria Kreiger",
+    "position": "Goalkeeper",
+    "rating": 74,
+    "basePrice": 11.7
+  },
+  {
+    "name": "Billie DuBuque",
+    "position": "Forward",
+    "rating": 76,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Vivian Okuneva",
+    "position": "Forward",
+    "rating": 70,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Ms. Leigh Sanford",
+    "position": "Forward",
+    "rating": 68,
+    "basePrice": 10.8
+  },
+  {
+    "name": "Randal Ratke",
+    "position": "Forward",
+    "rating": 89,
+    "basePrice": 16.1
+  },
+  {
+    "name": "Margie Johns",
+    "position": "Forward",
+    "rating": 70,
+    "basePrice": 10.8
+  },
+  {
+    "name": "Devin Botsford",
+    "position": "Goalkeeper",
+    "rating": 84,
+    "basePrice": 10
+  },
+  {
+    "name": "Roy Lesch",
+    "position": "Midfielder",
+    "rating": 88,
+    "basePrice": 15.5
+  },
+  {
+    "name": "Josefina McCullough",
+    "position": "Midfielder",
+    "rating": 64,
+    "basePrice": 10.9
+  },
+  {
+    "name": "Teresa Jenkins",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Colin Hane",
+    "position": "Midfielder",
+    "rating": 72,
+    "basePrice": 12.3
+  },
+  {
+    "name": "Glenn Weber",
+    "position": "Goalkeeper",
+    "rating": 81,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Dr. Theresa Lang",
+    "position": "Midfielder",
+    "rating": 86,
+    "basePrice": 13.1
+  },
+  {
+    "name": "Mr. Clifford Goyette",
+    "position": "Midfielder",
+    "rating": 61,
+    "basePrice": 6.3
+  },
+  {
+    "name": "Cedric Crooks DVM",
+    "position": "Forward",
+    "rating": 63,
+    "basePrice": 7.1
+  },
+  {
+    "name": "Amos Vandervort",
+    "position": "Defender",
+    "rating": 86,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Dr. Bryan Schmeler",
+    "position": "Midfielder",
+    "rating": 74,
+    "basePrice": 14
+  },
+  {
+    "name": "Dianne Sanford",
+    "position": "Defender",
+    "rating": 89,
+    "basePrice": 9.2
+  },
+  {
+    "name": "Richard Schumm",
+    "position": "Defender",
+    "rating": 63,
+    "basePrice": 11.1
+  },
+  {
+    "name": "Mattie Hirthe III",
+    "position": "Forward",
+    "rating": 86,
+    "basePrice": 15.3
+  },
+  {
+    "name": "Miss Connie Blanda",
+    "position": "Defender",
+    "rating": 80,
+    "basePrice": 9.3
+  },
+  {
+    "name": "Willie McGlynn",
+    "position": "Midfielder",
+    "rating": 72,
+    "basePrice": 7.8
+  },
+  {
+    "name": "Dana Kozey",
+    "position": "Midfielder",
+    "rating": 61,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Grant Littel",
+    "position": "Midfielder",
+    "rating": 84,
+    "basePrice": 12.5
+  },
+  {
+    "name": "Pat Stracke",
+    "position": "Forward",
+    "rating": 85,
+    "basePrice": 12.7
+  },
+  {
+    "name": "Madeline Weimann Sr.",
+    "position": "Goalkeeper",
+    "rating": 81,
+    "basePrice": 8.8
+  },
+  {
+    "name": "Christie Hauck-Erdman V",
+    "position": "Forward",
+    "rating": 79,
+    "basePrice": 8.6
+  },
+  {
+    "name": "Felipe Casper III",
+    "position": "Midfielder",
+    "rating": 75,
+    "basePrice": 9.3
+  },
+  {
+    "name": "Elisa Weber Jr.",
+    "position": "Midfielder",
+    "rating": 71,
+    "basePrice": 11.1
+  },
+  {
+    "name": "Simon Raynor",
+    "position": "Defender",
+    "rating": 85,
+    "basePrice": 16.4
+  },
+  {
+    "name": "Tiffany Abbott",
+    "position": "Defender",
+    "rating": 83,
+    "basePrice": 10.8
+  },
+  {
+    "name": "Jeanette Champlin",
+    "position": "Midfielder",
+    "rating": 90,
+    "basePrice": 9.3
+  },
+  {
+    "name": "Malcolm Walter",
+    "position": "Defender",
+    "rating": 78,
+    "basePrice": 9.6
+  },
+  {
+    "name": "Betty Greenfelder",
+    "position": "Defender",
+    "rating": 82,
+    "basePrice": 10.3
+  },
+  {
+    "name": "Deborah Williamson",
+    "position": "Midfielder",
+    "rating": 61,
+    "basePrice": 12
+  },
+  {
+    "name": "Dr. Toby Mitchell",
+    "position": "Defender",
+    "rating": 60,
+    "basePrice": 9.5
+  },
+  {
+    "name": "Rosemary Padberg",
+    "position": "Forward",
+    "rating": 75,
+    "basePrice": 8.3
+  },
+  {
+    "name": "Christie Kautzer",
+    "position": "Midfielder",
+    "rating": 64,
+    "basePrice": 9.9
+  },
+  {
+    "name": "Bobbie Robel",
+    "position": "Midfielder",
+    "rating": 68,
+    "basePrice": 13
+  },
+  {
+    "name": "Rudy Thompson",
+    "position": "Defender",
+    "rating": 86,
+    "basePrice": 17.1
+  },
+  {
+    "name": "Mark Bahringer",
+    "position": "Forward",
+    "rating": 81,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Nancy Hirthe IV",
+    "position": "Forward",
+    "rating": 63,
+    "basePrice": 9.4
+  },
+  {
+    "name": "Roman Fadel",
+    "position": "Defender",
+    "rating": 81,
+    "basePrice": 10.8
+  },
+  {
+    "name": "Mrs. Jean Rau",
+    "position": "Defender",
+    "rating": 87,
+    "basePrice": 11.7
+  },
+  {
+    "name": "Robin Anderson",
+    "position": "Midfielder",
+    "rating": 62,
+    "basePrice": 8.7
+  },
+  {
+    "name": "Bernice Christiansen",
+    "position": "Defender",
+    "rating": 64,
+    "basePrice": 9.6
+  },
+  {
+    "name": "Bradley Krajcik",
+    "position": "Forward",
+    "rating": 63,
+    "basePrice": 11.6
+  },
+  {
+    "name": "Dr. Thomas Mills",
+    "position": "Defender",
+    "rating": 72,
+    "basePrice": 9.1
+  },
+  {
+    "name": "Charlene Pfannerstill-Bernier",
+    "position": "Midfielder",
+    "rating": 88,
+    "basePrice": 12.8
+  },
+  {
+    "name": "Al Hand",
+    "position": "Defender",
+    "rating": 72,
+    "basePrice": 8
+  },
+  {
+    "name": "Douglas Johns",
+    "position": "Defender",
+    "rating": 74,
+    "basePrice": 12.6
+  },
+  {
+    "name": "Lila Schulist",
+    "position": "Defender",
+    "rating": 64,
+    "basePrice": 10.7
+  },
+  {
+    "name": "Meghan Tremblay",
+    "position": "Defender",
+    "rating": 76,
+    "basePrice": 7.8
+  },
+  {
+    "name": "Hubert Medhurst-Mayert",
+    "position": "Defender",
+    "rating": 83,
+    "basePrice": 12.2
+  },
+  {
+    "name": "Ms. Virginia Hand",
+    "position": "Defender",
+    "rating": 69,
+    "basePrice": 13.5
+  },
+  {
+    "name": "Dr. Bryant Gleason",
+    "position": "Midfielder",
+    "rating": 89,
+    "basePrice": 13.3
+  },
+  {
+    "name": "Randy Fritsch",
+    "position": "Defender",
+    "rating": 63,
+    "basePrice": 7.1
+  },
+  {
+    "name": "Hubert Koelpin",
+    "position": "Defender",
+    "rating": 73,
+    "basePrice": 7.6
+  },
+  {
+    "name": "Leah O'Connell",
+    "position": "Defender",
+    "rating": 88,
+    "basePrice": 11.8
+  },
+  {
+    "name": "Mrs. Marguerite Hammes",
+    "position": "Midfielder",
+    "rating": 84,
+    "basePrice": 13.4
+  },
+  {
+    "name": "Marcus Hickle-Zieme",
+    "position": "Defender",
+    "rating": 78,
+    "basePrice": 11.3
+  },
+  {
+    "name": "Doris Reilly II",
+    "position": "Forward",
+    "rating": 88,
+    "basePrice": 13.1
+  },
+  {
+    "name": "Priscilla Grant",
+    "position": "Defender",
+    "rating": 90,
+    "basePrice": 15.2
+  },
+  {
+    "name": "Mr. Everett Moen",
+    "position": "Midfielder",
+    "rating": 75,
+    "basePrice": 12.1
+  },
+  {
+    "name": "Tamara Bauch",
+    "position": "Midfielder",
+    "rating": 82,
+    "basePrice": 9.7
+  },
+  {
+    "name": "Flora Hegmann MD",
+    "position": "Defender",
+    "rating": 63,
+    "basePrice": 11.4
+  },
+  {
+    "name": "Cary Bailey",
+    "position": "Forward",
+    "rating": 82,
+    "basePrice": 11.2
+  },
+  {
+    "name": "Greg Thompson",
+    "position": "Midfielder",
+    "rating": 74,
+    "basePrice": 8.4
+  },
+  {
+    "name": "Mrs. Henrietta Donnelly",
+    "position": "Forward",
+    "rating": 83,
+    "basePrice": 9.5
+  },
+  {
+    "name": "Camille Swaniawski",
+    "position": "Midfielder",
+    "rating": 69,
+    "basePrice": 10
+  },
+  {
+    "name": "Andre Rice DDS",
+    "position": "Forward",
+    "rating": 78,
+    "basePrice": 13.6
+  },
+  {
+    "name": "Dr. Pete Marks DDS",
+    "position": "Midfielder",
+    "rating": 61,
+    "basePrice": 7.3
+  },
+  {
+    "name": "Cathy Runolfsdottir",
+    "position": "Midfielder",
+    "rating": 87,
+    "basePrice": 8.7
+  },
+  {
+    "name": "Bobbie Conroy II",
+    "position": "Midfielder",
+    "rating": 80,
+    "basePrice": 15.6
+  },
+  {
+    "name": "Christian McGlynn",
+    "position": "Forward",
+    "rating": 88,
+    "basePrice": 12.4
+  },
+  {
+    "name": "Dr. Bob Dietrich",
+    "position": "Forward",
+    "rating": 75,
+    "basePrice": 11.3
+  }
+]
