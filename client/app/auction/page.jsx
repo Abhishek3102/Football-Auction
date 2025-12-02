@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { DollarSign, Users, Gavel, Play, Square, Plus } from "lucide-react";
+import { API_BASE_URL } from "@/lib/config";
 
 export default function AuctionPage() {
   const [socket, setSocket] = useState(null);
@@ -39,8 +40,9 @@ export default function AuctionPage() {
     }
   };
 
+
   useEffect(() => {
-    const newSocket = io("http://localhost:5000");
+    const newSocket = io(API_BASE_URL);
     setSocket(newSocket);
     fetchTeams();
 
@@ -210,7 +212,7 @@ export default function AuctionPage() {
 
   const fetchTeams = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/teams");
+      const response = await fetch(`${API_BASE_URL}/api/teams`);
       const data = await response.json();
       console.log("Teams fetched:", data);
       setTeams(data);

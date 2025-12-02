@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Users, DollarSign, Trophy, Plus } from "lucide-react"
+import { API_BASE_URL } from "@/lib/config"
 
 export default function TeamsPage() {
   const [teams, setTeams] = useState([])
@@ -18,9 +19,10 @@ export default function TeamsPage() {
     fetchTeams()
   }, [])
 
+
   const fetchTeams = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/teams")
+      const response = await fetch(`${API_BASE_URL}/api/teams`)
       const data = await response.json()
       setTeams(data)
     } catch (error) {
@@ -30,7 +32,7 @@ export default function TeamsPage() {
 
   const createTeam = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/teams", {
+      const response = await fetch(`${API_BASE_URL}/api/teams`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

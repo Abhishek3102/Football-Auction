@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Trophy, Plus, Search, Filter } from "lucide-react"
+import { API_BASE_URL } from "@/lib/config"
 
 export default function PlayersPage() {
   const [players, setPlayers] = useState([])
@@ -26,9 +27,10 @@ export default function PlayersPage() {
     filterPlayers()
   }, [players, searchTerm, positionFilter, statusFilter])
 
+
   const fetchPlayers = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/players")
+      const response = await fetch(`${API_BASE_URL}/api/players`)
       const data = await response.json()
       setPlayers(data)
     } catch (error) {
@@ -38,7 +40,7 @@ export default function PlayersPage() {
 
   const createPlayer = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/players", {
+      const response = await fetch(`${API_BASE_URL}/api/players`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
