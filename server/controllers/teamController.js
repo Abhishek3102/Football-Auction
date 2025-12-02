@@ -10,3 +10,15 @@ export const createTeam = async (req, res) => {
   await team.save();
   res.status(201).json(team);
 };
+
+export const getTeamById = async (req, res) => {
+  try {
+    const team = await Team.findById(req.params.id).populate("players");
+    if (!team) {
+      return res.status(404).json({ message: "Team not found" });
+    }
+    res.json(team);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};

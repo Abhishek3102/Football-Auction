@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -9,16 +10,17 @@ import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Users, DollarSign, Trophy, Plus } from "lucide-react"
 import { API_BASE_URL } from "@/lib/config"
+import { getTeamAssets } from "@/lib/team-utils"
 
 export default function TeamsPage() {
   const [teams, setTeams] = useState([])
   const [newTeam, setNewTeam] = useState({ name: "", purse: "" })
   const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     fetchTeams()
   }, [])
-
 
   const fetchTeams = async () => {
     try {
@@ -126,74 +128,71 @@ export default function TeamsPage() {
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {teams.map((team) => (
-            <motion.div key={team._id} variants={itemVariants}>
-              <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl flex items-center gap-2">
-                    <Users className="h-6 w-6" />
-                    {team.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {/* Budget */}
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-300 flex items-center gap-2">
-                        <DollarSign className="h-4 w-4" />
-                        Budget
-                      </span>
-                      <Badge className="bg-green-600 text-white text-lg px-3 py-1">
-                        ${team.purse.toLocaleString()}
-                      </Badge>
+          {teams.map((team) => {
+            const assets = getTeamAssets(team.name);
+            return (
+              <motion.div
+                key={team._id}
+                variants={itemVariants}
+                onClick={() => router.push(`/teams/${team._id}`)}
+                className="cursor-pointer"
+              >
+                <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 h-full">
+                  <CardHeader className="flex flex-row items-center gap-4">
+                    <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10 flex items-center justify-center p-1">
+                      <img
+                        src={assets.logo}
+                        alt={team.name}
+                        className="w-full h-full object-cover rounded-full"
+                      />
                     </div>
+                    <CardTitle className="text-white text-2xl">
+                      {team.name}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      {/* Budget */}
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300 flex items-center gap-2">
+                          <DollarSign className="h-4 w-4" />
+                          Budget
+                        </span>
+                        <Badge className="bg-green-600 text-white text-lg px-3 py-1">
+                          ${team.purse.toLocaleString()}
+                        </Badge>
+                      </div>
 
-                    {/* Players Count */}
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-300 flex items-center gap-2">
-                        <Trophy className="h-4 w-4" />
-                        Players
-                      </span>
-                      <Badge className="bg-blue-600 text-white text-lg px-3 py-1">{team.players?.length || 0}</Badge>
-                    </div>
+                      {/* Players Count */}
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300 flex items-center gap-2">
+                          <Trophy className="h-4 w-4" />
+                          Players
+                        </span>
+                        <Badge className="bg-blue-600 text-white text-lg px-3 py-1">{team.players?.length || 0}</Badge>
+                      </div>
 
-                    {/* Players List */}
-                    {team.players && team.players.length > 0 && (
-                      <div className="mt-4">
-                        <h4 className="text-white font-medium mb-2">Squad:</h4>
-                        <div className="space-y-2 max-h-32 overflow-y-auto">
-                          {team.players.map((player, index) => (
-                            <div key={index} className="bg-white/10 rounded-lg p-2">
-                              <div className="flex justify-between items-center">
-                                <span className="text-white text-sm">{player.name || `Player ${index + 1}`}</span>
-                                <span className="text-gray-300 text-xs">{player.position || "N/A"}</span>
-                              </div>
-                            </div>
-                          ))}
+                      {/* Team Stats */}
+                      <div className="grid grid-cols-2 gap-2 mt-4">
+                        <div className="bg-white/10 rounded-lg p-2 text-center">
+                          <div className="text-white font-bold">
+                            ${(team.players?.reduce((sum, p) => sum + (p.soldPrice || 0), 0) || 0).toLocaleString()}
+                          </div>
+                          <div className="text-gray-300 text-xs">Spent</div>
+                        </div>
+                        <div className="bg-white/10 rounded-lg p-2 text-center">
+                          <div className="text-white font-bold">
+                            {team.players?.reduce((sum, p) => sum + (p.rating || 0), 0) || 0}
+                          </div>
+                          <div className="text-gray-300 text-xs">Total Rating</div>
                         </div>
                       </div>
-                    )}
-
-                    {/* Team Stats */}
-                    <div className="grid grid-cols-2 gap-2 mt-4">
-                      <div className="bg-white/10 rounded-lg p-2 text-center">
-                        <div className="text-white font-bold">
-                          ${(team.players?.reduce((sum, p) => sum + (p.soldPrice || 0), 0) || 0).toLocaleString()}
-                        </div>
-                        <div className="text-gray-300 text-xs">Spent</div>
-                      </div>
-                      <div className="bg-white/10 rounded-lg p-2 text-center">
-                        <div className="text-white font-bold">
-                          {team.players?.reduce((sum, p) => sum + (p.rating || 0), 0) || 0}
-                        </div>
-                        <div className="text-gray-300 text-xs">Total Rating</div>
-                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                  </CardContent>
+                </Card>
+              </motion.div>
+            )
+          })}
         </motion.div>
 
         {teams.length === 0 && (
