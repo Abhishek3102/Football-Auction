@@ -2,9 +2,13 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Trophy, Users, DollarSign, Play } from "lucide-react"
+import { Trophy, Users, DollarSign, Play, Phone, Mail, Linkedin, Github } from "lucide-react"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { contactDetails } from "@/lib/contact-details"
+import { io } from "socket.io-client"
+import { API_BASE_URL } from "@/lib/config"
 
 export default function HomePage() {
   const [stats, setStats] = useState({
@@ -17,11 +21,30 @@ export default function HomePage() {
   useEffect(() => {
     // Fetch initial stats
     fetchStats()
+
+    // Connect to socket
+    const socket = io(API_BASE_URL)
+
+    socket.on("connect", () => {
+      console.log("Connected to socket")
+    })
+
+    // Listen for updates
+    socket.on("player-sold", () => {
+      fetchStats()
+    })
+
+    return () => {
+      socket.disconnect()
+    }
   }, [])
 
   const fetchStats = async () => {
     try {
-      const [teamsRes, playersRes] = await Promise.all([fetch("/api/teams"), fetch("/api/players")])
+      const [teamsRes, playersRes] = await Promise.all([
+        fetch(`${API_BASE_URL}/api/teams`),
+        fetch(`${API_BASE_URL}/api/players`)
+      ])
 
       const teams = await teamsRes.json()
       const players = await playersRes.json()
@@ -89,20 +112,26 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl text-gray-200 drop-shadow-md">Live bidding for the ultimate football experience</p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="absolute bottom-10 animate-bounce hidden md:block"
-          >
-            <p className="text-white text-sm">Scroll Down</p>
-          </motion.div>
+
         </div>
       </div>
 
       {/* Content Section */}
       <div className="bg-gray-900 py-20 px-4">
         <div className="container mx-auto">
+          {/* Introduction Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16 max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Welcome to the Arena</h2>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Experience the thrill of building your dream team in real-time. Our advanced auction platform brings managers, players, and auctioneers together for a seamless and electrifying bidding war. Track budgets, analyze player stats, and make strategic decisions to dominate the league.
+            </p>
+          </motion.div>
           {/* Stats Cards */}
           <motion.div
             variants={containerVariants}
@@ -198,8 +227,74 @@ export default function HomePage() {
               </Card>
             </Link>
           </motion.div>
+
+          {/* FAQ Section */}
+          <div className="my-32">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+            <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-xl">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1" className="border-white/10">
+                  <AccordionTrigger className="text-white hover:text-yellow-400 text-lg">How do I start an auction?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300 text-base">
+                    Go to the "Live Auction" page. Ensure all teams are created and players are loaded. The auctioneer can then start bidding for each player.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2" className="border-white/10">
+                  <AccordionTrigger className="text-white hover:text-yellow-400 text-lg">How do I create a team?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300 text-base">
+                    Navigate to the "Teams" page and click on the "Add New Team" button. Enter the team name and initial budget (purse).
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3" className="border-white/10">
+                  <AccordionTrigger className="text-white hover:text-yellow-400 text-lg">Can I view team details?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300 text-base">
+                    Yes! Click on any team card in the "Teams" page to view their full squad, remaining budget, and total money spent.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4" className="border-white/10">
+                  <AccordionTrigger className="text-white hover:text-yellow-400 text-lg">Is the data saved?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300 text-base">
+                    Yes, all teams, players, and auction results are saved to the database and persist even after you close the application.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Footer / Contact Section */}
+      <footer className="bg-black/40 backdrop-blur-xl border-t border-white/10 py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold text-white mb-2">Football Auction</h3>
+              <p className="text-gray-400">The ultimate platform for live sports auctions.</p>
+            </div>
+
+            <div className="flex flex-col items-center md:items-end gap-4">
+              <h4 className="text-xl font-semibold text-white">Contact Developer</h4>
+              <div className="flex flex-wrap justify-center md:justify-end gap-6">
+                <a href={`tel:${contactDetails.phone}`} className="flex items-center justify-center bg-white/10 p-3 rounded-full text-gray-300 hover:bg-yellow-500 hover:text-black transition-all duration-300" title="Call">
+                  <Phone className="h-6 w-6" />
+                </a>
+                <a href={`mailto:${contactDetails.email}`} className="flex items-center justify-center bg-white/10 p-3 rounded-full text-gray-300 hover:bg-yellow-500 hover:text-black transition-all duration-300" title="Email">
+                  <Mail className="h-6 w-6" />
+                </a>
+                <a href={contactDetails.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white/10 p-3 rounded-full text-gray-300 hover:bg-blue-600 hover:text-white transition-all duration-300" title="LinkedIn">
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a href={contactDetails.github} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white/10 p-3 rounded-full text-gray-300 hover:bg-white hover:text-black transition-all duration-300" title="GitHub">
+                  <Github className="h-6 w-6" />
+                </a>
+              </div>
+              <div className="text-gray-500 text-sm mt-4">
+                Developed by {contactDetails.name}
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
