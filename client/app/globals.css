@@ -101,3 +101,39 @@
 .pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* Broadcast ticker (IPL style) */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  display: inline-flex;
+  animation: ticker-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b, #fde68a, #f59e0b, #fbbf24);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-shine 4s linear infinite;
+}
+
+@keyframes gold-shine {
+  to {
+    background-position: 200% center;
+  }
+}

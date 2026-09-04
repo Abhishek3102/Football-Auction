@@ -7,7 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Trophy, Plus, Search, Filter } from "lucide-react"
+import { toast } from "sonner"
+import { Trophy, Plus, Search, Filter, Trash2 } from "lucide-react"
 import { API_BASE_URL } from "@/lib/config"
 
 export default function PlayersPage() {
@@ -40,26 +41,68 @@ export default function PlayersPage() {
 
   const createPlayer = async () => {
     try {
+      if (!newPlayer.name.trim()) {
+        toast.error("Player name is required")
+        return
+      }
+      if (!newPlayer.position) {
+        toast.error("Please select a position")
+        return
+      }
+      const rating = Number.parseInt(newPlayer.rating)
+      const basePrice = Number.parseInt(newPlayer.basePrice)
+      if (Number.isNaN(rating) || rating < 1 || rating > 99) {
+        toast.error("Rating must be between 1 and 99")
+        return
+      }
+      if (Number.isNaN(basePrice) || basePrice < 0) {
+        toast.error("Base price must be a valid amount")
+        return
+      }
+
       const response = await fetch(`${API_BASE_URL}/api/players`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: newPlayer.name,
+          name: newPlayer.name.trim(),
           position: newPlayer.position,
-          rating: Number.parseInt(newPlayer.rating),
-          basePrice: Number.parseInt(newPlayer.basePrice),
+          rating,
+          basePrice,
         }),
       })
 
+      const data = await response.json().catch(() => ({}))
       if (response.ok) {
         setNewPlayer({ name: "", position: "", rating: "", basePrice: "" })
         setIsDialogOpen(false)
+        toast.success(`${data.name || "Player"} added to the pool`)
         fetchPlayers()
+      } else {
+        toast.error(data.message || "Failed to create player")
       }
     } catch (error) {
       console.error("Error creating player:", error)
+      toast.error("Failed to create player")
+    }
+  }
+
+  const deletePlayer = async (player) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/players/${player._id}`, {
+        method: "DELETE",
+      })
+      const data = await response.json().catch(() => ({}))
+      if (response.ok) {
+        toast.success(`${player.name} removed`)
+        fetchPlayers()
+      } else {
+        toast.error(data.message || "Failed to delete player")
+      }
+    } catch (error) {
+      console.error("Error deleting player:", error)
+      toast.error("Failed to delete player")
     }
   }
 
@@ -130,20 +173,26 @@ export default function PlayersPage() {
                   onChange={(e) => setNewPlayer({ ...newPlayer, name: e.target.value })}
                   className="bg-gray-700 border-gray-600 text-white"
                 />
-                <Input
-                  placeholder="Position (e.g., Forward, Midfielder)"
+                <select
                   value={newPlayer.position}
                   onChange={(e) => setNewPlayer({ ...newPlayer, position: e.target.value })}
-                  className="bg-gray-700 border-gray-600 text-white"
-                />
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-md p-2"
+                  aria-label="Position"
+                >
+                  <option value="">Select Position</option>
+                  <option value="Goalkeeper">Goalkeeper</option>
+                  <option value="Defender">Defender</option>
+                  <option value="Midfielder">Midfielder</option>
+                  <option value="Forward">Forward</option>
+                </select>
                 <Input
                   type="number"
-                  placeholder="Rating (1-100)"
+                  placeholder="Rating (1-99)"
                   value={newPlayer.rating}
                   onChange={(e) => setNewPlayer({ ...newPlayer, rating: e.target.value })}
                   className="bg-gray-700 border-gray-600 text-white"
                   min="1"
-                  max="100"
+                  max="99"
                 />
                 <Input
                   type="number"
@@ -267,13 +316,30 @@ export default function PlayersPage() {
                           </Badge>
                         </div>
                         <div className="bg-green-600/20 rounded-lg p-2">
-                          <p className="text-green-300 text-xs text-center">Owned by Team</p>
+                          <p className="text-green-300 text-xs text-center">
+                            {player.soldTo?.name ? `Owned by ${player.soldTo.name}` : "Owned by Team"}
+                          </p>
                         </div>
                       </>
                     )}
 
                     {/* Status Indicator */}
                     <div className={`w-full h-2 rounded-full ${player.isSold ? "bg-green-500" : "bg-yellow-500"}`} />
+
+                    {/* Delete (only for unsold players) */}
+                    {!player.isSold && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          deletePlayer(player)
+                        }}
+                        className="w-full text-red-400 hover:bg-red-500/10 hover:text-red-300"
+                      >
+                        <Trash2 className="h-4 w-4 mr-1" /> Remove
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>

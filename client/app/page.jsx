@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Trophy, Users, DollarSign, Play, Phone, Mail, Linkedin, Github } from "lucide-react"
+import { Trophy, Users, DollarSign, Play, Phone, Mail, Linkedin, Github, Gavel, ArrowRight, Flame, Target, Wallet, Sparkles } from "lucide-react"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -17,6 +17,8 @@ export default function HomePage() {
     soldPlayers: 0,
     totalValue: 0,
   })
+  const [topBuys, setTopBuys] = useState([])
+  const [tickerTeams, setTickerTeams] = useState([])
 
   useEffect(() => {
     // Fetch initial stats
@@ -41,23 +43,22 @@ export default function HomePage() {
 
   const fetchStats = async () => {
     try {
-      const [teamsRes, playersRes] = await Promise.all([
-        fetch(`${API_BASE_URL}/api/teams`),
-        fetch(`${API_BASE_URL}/api/players`)
-      ])
-
-      const teams = await teamsRes.json()
-      const players = await playersRes.json()
-
-      const soldPlayers = players.filter((p) => p.isSold)
-      const totalValue = soldPlayers.reduce((sum, p) => sum + (p.soldPrice || 0), 0)
-
-      setStats({
-        totalTeams: teams.length,
-        totalPlayers: players.length,
-        soldPlayers: soldPlayers.length,
-        totalValue,
-      })
+      const response = await fetch(`${API_BASE_URL}/api/teams/stats/summary`)
+      if (!response.ok) throw new Error("Failed to fetch stats")
+      const data = await response.json()
+      setStats(data)
+      const playersRes = await fetch(`${API_BASE_URL}/api/players`)
+      if (playersRes.ok) {
+        const players = await playersRes.json()
+        const sold = players
+          .filter((p) => p.soldTo && p.soldPrice)
+          .sort((a, b) => new Date(b.soldAt || 0) - new Date(a.soldAt || 0))
+        setTopBuys(sold.slice(0, 6))
+      }
+      const teamsRes = await fetch(`${API_BASE_URL}/api/teams`)
+      if (teamsRes.ok) {
+        setTickerTeams(await teamsRes.json())
+      }
     } catch (error) {
       console.error("Error fetching stats:", error)
     }
@@ -110,9 +111,47 @@ export default function HomePage() {
               Football Auction
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 drop-shadow-md">Live bidding for the ultimate football experience</p>
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <Link href="/auction">
+                <span className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold px-8 py-3 rounded-full hover:scale-105 transition-transform shadow-lg shadow-orange-500/30">
+                  <Play className="h-5 w-5" /> Enter Auction Room
+                </span>
+              </Link>
+              <Link href="/players">
+                <span className="inline-flex items-center gap-2 border border-white/40 bg-black/40 backdrop-blur text-white font-semibold px-8 py-3 rounded-full hover:bg-white/10 transition-colors">
+                  Browse Players <ArrowRight className="h-5 w-5" />
+                </span>
+              </Link>
+            </div>
           </motion.div>
 
 
+        </div>
+      </div>
+
+      {/* Broadcast Ticker */}
+      <div className="relative bg-black/80 border-y border-yellow-500/40 overflow-hidden py-2">
+        <div className="flex items-center">
+          <span className="flex-shrink-0 z-10 bg-yellow-500 text-black text-xs font-bold px-3 py-1 ml-2 rounded uppercase tracking-wider">
+            ⚡ Live Board
+          </span>
+          <div className="overflow-hidden whitespace-nowrap flex-1">
+            <div className="ticker-track">
+              {[0, 1].map((dup) => (
+                <span key={dup} className="inline-flex items-center">
+                  {tickerTeams.map((t) => (
+                    <span key={`${dup}-${t._id}`} className="inline-flex items-center gap-2 mx-6 text-sm">
+                      <span className="text-yellow-400 font-semibold">{t.name}</span>
+                      <span className="text-gray-400">Purse</span>
+                      <span className="text-green-400 font-bold">${(t.purse ?? 0).toLocaleString()}</span>
+                      <span className="text-gray-400">· {t.players?.length ?? 0} players</span>
+                      <span className="text-yellow-600">|</span>
+                    </span>
+                  ))}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

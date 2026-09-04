@@ -8,7 +8,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Users, DollarSign, Trophy, Plus } from "lucide-react"
+import { toast } from "sonner"
+import { Users, DollarSign, Trophy, Plus, Trash2 } from "lucide-react"
 import { API_BASE_URL } from "@/lib/config"
 import { getTeamAssets } from "@/lib/team-utils"
 
@@ -34,24 +35,58 @@ export default function TeamsPage() {
 
   const createTeam = async () => {
     try {
+      if (!newTeam.name.trim()) {
+        toast.error("Team name is required")
+        return
+      }
+      const purse = Number.parseInt(newTeam.purse)
+      if (Number.isNaN(purse) || purse <= 0) {
+        toast.error("Purse must be a positive number")
+        return
+      }
+
       const response = await fetch(`${API_BASE_URL}/api/teams`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: newTeam.name,
-          purse: Number.parseInt(newTeam.purse),
+          name: newTeam.name.trim(),
+          purse,
         }),
       })
 
+      const data = await response.json().catch(() => ({}))
       if (response.ok) {
         setNewTeam({ name: "", purse: "" })
         setIsDialogOpen(false)
+        toast.success(`${data.name || "Team"} created`)
         fetchTeams()
+      } else {
+        toast.error(data.message || "Failed to create team")
       }
     } catch (error) {
       console.error("Error creating team:", error)
+      toast.error("Failed to create team")
+    }
+  }
+
+  const deleteTeam = async (team, e) => {
+    e.stopPropagation()
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/teams/${team._id}`, {
+        method: "DELETE",
+      })
+      const data = await response.json().catch(() => ({}))
+      if (response.ok) {
+        toast.success(`${team.name} deleted`)
+        fetchTeams()
+      } else {
+        toast.error(data.message || "Failed to delete team")
+      }
+    } catch (error) {
+      console.error("Error deleting team:", error)
+      toast.error("Failed to delete team")
     }
   }
 
@@ -162,6 +197,7 @@ export default function TeamsPage() {
                           ${team.purse.toLocaleString()}
                         </Badge>
                       </div>
+                      <p className="text-gray-400 text-xs -mt-3">Remaining purse after purchases</p>
 
                       {/* Players Count */}
                       <div className="flex items-center justify-between">
@@ -187,6 +223,16 @@ export default function TeamsPage() {
                           <div className="text-gray-300 text-xs">Total Rating</div>
                         </div>
                       </div>
+
+                      {/* Delete team */}
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={(e) => deleteTeam(team, e)}
+                        className="w-full text-red-400 hover:bg-red-500/10 hover:text-red-300"
+                      >
+                        <Trash2 className="h-4 w-4 mr-1" /> Delete Team
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>

@@ -1,173 +1,21 @@
-// // import Auction from "../models/Auction.js";
-// // import Player from "../models/Player.js";
-// // import Team from "../models/Team.js";
-// // import { Server } from "socket.io";
-// // import http from "http";
-// // import express from "express";
-// // import cors from "cors";
-
-// // const app = express();
-// // app.use(cors());
-
-// // const server = http.createServer(app);
-
-// // const io = new Server(server, {
-// //   cors: {
-// //     origin: "http://localhost:3000", // ALLOW frontend
-// //     methods: ["GET", "POST"],
-// //   },
-// // });
-
-// // export const setupAuctionSocket = (io) => {
-// //   let currentPlayer = null;
-// //   let timer = null;
-
-// //   io.on("connection", (socket) => {
-// //     console.log("Client connected");
-
-// //     socket.on("start-auction", async () => {
-// //       const player = await Player.findOne({ isSold: false });
-// //       console.log("Starting auction - found player:", player);
-
-// //       if (!player) return socket.emit("auction-end");
-// //       currentPlayer = player;
-// //       io.emit("new-player", player);
-// //     });
-
-// //     socket.on("place-bid", async ({ teamId, amount }) => {
-// //       if (!currentPlayer) return;
-
-// //       const team = await Team.findById(teamId);
-// //       if (amount > team.purse) return;
-
-// //       // Save auction bid
-// //       io.emit("new-bid", { teamId, amount });
-// //     });
-
-// //     socket.on("finalize-auction", async ({ teamId, amount }) => {
-// //       const team = await Team.findById(teamId);
-// //       const player = await Player.findById(currentPlayer._id);
-
-// //       player.isSold = true;
-// //       player.soldTo = teamId;
-// //       player.soldPrice = amount;
-// //       await player.save();
-
-// //       team.players.push(player._id);
-// //       team.purse -= amount;
-// //       await team.save();
-
-// //       io.emit("player-sold", { player, team });
-// //       currentPlayer = null;
-// //     });
-// //   });
-// // };
-
-// import Auction from "../models/Auction.js";
-// import Player from "../models/Player.js";
-// import Team from "../models/Team.js";
-// import { Server } from "socket.io";
-// import http from "http";
-// import express from "express";
-// import cors from "cors";
-
-// const app = express();
-// app.use(cors());
-
-// const server = http.createServer(app);
-
-// const io = new Server(server, {
-//   cors: {
-//     origin: "http://localhost:3000", // ALLOW frontend
-//     methods: ["GET", "POST"],
-//   },
-// });
-
-// export const setupAuctionSocket = (io) => {
-//   let currentPlayer = null;
-//   let timer = null;
-
-//   io.on("connection", (socket) => {
-//     console.log("Client connected");
-
-//     socket.on("start-auction", async () => {
-//       const player = await Player.findOne({ isSold: false });
-//       console.log("Starting auction - found player:", player);
-
-//       if (!player) return socket.emit("auction-end");
-//       currentPlayer = player;
-//       io.emit("new-player", player);
-//     });
-
-//     socket.on("place-bid", async ({ teamId, amount }) => {
-//       if (!currentPlayer) return;
-
-//       const team = await Team.findById(teamId);
-//       if (amount > team.purse) return;
-
-//       // Save auction bid
-//       io.emit("new-bid", { teamId, amount });
-//     });
-
-//     // In your auctionSocket.js - make sure players are marked properly
-//     socket.on("finalize-auction", async ({ teamId, amount, playerId }) => {
-//       const player = await Player.findById(playerId);
-//       const team = await Team.findById(teamId);
-
-//       // Mark player as sold
-//       player.isSold = true;
-//       player.soldTo = teamId;
-//       player.soldPrice = amount;
-//       await player.save();
-
-//       // Add to team and update budget
-//       team.players.push(playerId);
-//       team.purse -= amount;
-//       await team.save();
-
-//       io.emit("player-sold", { player, team });
-//     });
-
-//     // In your auctionSocket.js - make sure to handle unsold players
-//     socket.on("unsold-player", async (playerId) => {
-//       const player = await Player.findById(playerId);
-//       if (!player) return;
-
-//       // Mark player as unsold
-//       player.isSold = false;
-//       await player.save();
-
-//       io.emit("player-unsold", player);
-//     });
-
-//     // Make sure your start-auction only returns unsold players
-//     socket.on("start-auction", async () => {
-//       const player = await Player.findOne({ isSold: false });
-//       if (!player) return socket.emit("auction-end");
-//       io.emit("new-player", player);
-//     });
-//   });
-// };
-
-import Auction from "../models/Auction.js";
 import Player from "../models/Player.js";
 import Team from "../models/Team.js";
-import { Server } from "socket.io";
-import http from "http";
-import express from "express";
-import cors from "cors";
+import Auction from "../models/Auction.js";
 
-const app = express();
-app.use(cors());
+const AUCTION_DURATION_MS = 30000;
+const HOST_TOKEN = process.env.HOST_TOKEN || ""; // if set, host actions require this token
 
-const server = http.createServer(app);
+// Bid increment rules: under $10M -> $0.5M, $10M-$50M -> $1M, above $50M -> $2M
+export const getIncrementAmount = (currentBid) => {
+  const pct = Math.round(currentBid * 0.05);
+  return Math.max(5, Math.round(pct / 5) * 5); // 5% of bid, rounded to nearest 5, min 5
+};
 
-const io = new Server(server, {
-  cors: {
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"],
-  },
-});
+const isHost = (token) => {
+  // When no HOST_TOKEN is configured, everyone is a host (dev mode / backwards compat)
+  if (!HOST_TOKEN) return true;
+  return token === HOST_TOKEN;
+};
 
 export const setupAuctionSocket = (io) => {
   let currentPlayer = null;
@@ -175,6 +23,43 @@ export const setupAuctionSocket = (io) => {
   let auctionEndTime = null;
   let currentHighestBid = 0;
   let currentHighestBidder = null;
+  let timerInterval = null;
+  let liveAuctionDocId = null;
+
+  const broadcastState = () => {
+    io.emit("auction-state", {
+      player: currentPlayer,
+      highestBid: currentHighestBid,
+      highestBidder: currentHighestBidder,
+      auctionEndTime,
+      isContinuousMode,
+    });
+  };
+
+  const clearTimer = () => {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+  };
+
+  const startTimer = () => {
+    clearTimer();
+    timerInterval = setInterval(async () => {
+      if (!currentPlayer || !auctionEndTime) return;
+      const remaining = Math.max(0, auctionEndTime - Date.now());
+      io.emit("timer-tick", { remainingMs: remaining, auctionEndTime });
+      if (remaining <= 0) {
+        clearTimer();
+        // Server decides the outcome — no client involvement
+        if (currentHighestBidder) {
+          await finalizeAuction(currentHighestBidder, currentHighestBid, currentPlayer._id);
+        } else {
+          await handleUnsold(currentPlayer._id);
+        }
+      }
+    }, 500);
+  };
 
   const startNextAuction = async () => {
     const player = await Player.findOne({
@@ -182,12 +67,11 @@ export const setupAuctionSocket = (io) => {
       isAlreadyAuctioned: false,
     });
 
-    console.log("Starting next auction - found player:", player);
-
     if (!player) {
       currentPlayer = null;
       isContinuousMode = false;
       auctionEndTime = null;
+      liveAuctionDocId = null;
       io.emit("auction-end");
       return;
     }
@@ -195,138 +79,246 @@ export const setupAuctionSocket = (io) => {
     currentPlayer = player;
     currentHighestBid = player.basePrice;
     currentHighestBidder = null;
-    auctionEndTime = Date.now() + 30000; // 30 seconds from now
+    auctionEndTime = Date.now() + AUCTION_DURATION_MS;
 
-    io.emit("new-player", { 
-      player, 
+    // Persist live state so a server restart can restore it
+    try {
+      const doc = await Auction.create({
+        currentPlayer: player._id,
+        isLive: true,
+        highestBid: player.basePrice,
+        highestBidder: null,
+        endsAt: new Date(auctionEndTime),
+        bidHistory: [],
+      });
+      liveAuctionDocId = doc._id;
+    } catch (e) {
+      console.error("Failed to persist auction state:", e.message);
+    }
+
+    io.emit("new-player", {
+      player,
       auctionEndTime,
-      highestBid: currentHighestBid 
+      highestBid: currentHighestBid,
     });
+    startTimer();
   };
+
+  const finalizeAuction = async (teamId, amount, playerId) => {
+    if (!currentPlayer || currentPlayer._id.toString() !== playerId.toString()) {
+      console.log("Finalize mismatch:", { current: currentPlayer?._id, received: playerId });
+      return;
+    }
+    if (teamId !== currentHighestBidder) {
+      console.log("Finalize rejected: bidder is not the highest bidder");
+      return;
+    }
+    if (amount !== currentHighestBid) {
+      console.log("Finalize rejected: amount does not match highest bid");
+      return;
+    }
+
+    const player = await Player.findById(playerId);
+    const team = await Team.findById(teamId);
+    if (!player || !team) return;
+
+    // Atomic purse deduction — prevents double-spend on concurrent sales
+    const updated = await Team.findOneAndUpdate(
+      { _id: teamId, purse: { $gte: amount } },
+      { $inc: { purse: -amount }, $addToSet: { players: playerId } },
+      { new: true }
+    );
+    if (!updated) {
+      console.log("Finalize rejected: insufficient purse");
+      return;
+    }
+
+    player.isSold = true;
+    player.isAlreadyAuctioned = true;
+    player.soldTo = teamId;
+    player.soldPrice = amount;
+    player.soldAt = new Date();
+    await player.save();
+
+    if (liveAuctionDocId) {
+      try {
+        await Auction.findByIdAndUpdate(liveAuctionDocId, {
+          isLive: false,
+          result: { type: "sold", teamId, amount },
+        });
+      } catch (_) {}
+    }
+
+    io.emit("player-sold", { player, team: updated });
+
+    currentPlayer = null;
+    auctionEndTime = null;
+    currentHighestBid = 0;
+    currentHighestBidder = null;
+    liveAuctionDocId = null;
+    clearTimer();
+
+    if (isContinuousMode) {
+      setTimeout(startNextAuction, 3000);
+    }
+  };
+
+  const handleUnsold = async (playerId) => {
+    if (!currentPlayer || currentPlayer._id.toString() !== playerId.toString()) {
+      console.log("Unsold mismatch:", { current: currentPlayer?._id, received: playerId });
+      return;
+    }
+
+    const player = await Player.findById(playerId);
+    if (!player) return;
+
+    player.isSold = false;
+    player.isAlreadyAuctioned = true;
+    await player.save();
+
+    if (liveAuctionDocId) {
+      try {
+        await Auction.findByIdAndUpdate(liveAuctionDocId, {
+          isLive: false,
+          result: { type: "unsold" },
+        });
+      } catch (_) {}
+    }
+
+    io.emit("player-unsold", { player });
+
+    currentPlayer = null;
+    auctionEndTime = null;
+    currentHighestBid = 0;
+    currentHighestBidder = null;
+    liveAuctionDocId = null;
+    clearTimer();
+
+    if (isContinuousMode) {
+      setTimeout(startNextAuction, 3000);
+    }
+  };
+
+  // Restore a live auction after a server restart
+  const restoreLiveAuction = async () => {
+    try {
+      const live = await Auction.findOne({ isLive: true });
+      if (!live) return;
+      const player = await Player.findById(live.currentPlayer);
+      if (!player || player.isSold) {
+        await Auction.findByIdAndUpdate(live._id, { isLive: false });
+        return;
+      }
+      currentPlayer = player;
+      currentHighestBid = live.highestBid ?? player.basePrice;
+      currentHighestBidder = live.highestBidder ?? null;
+      auctionEndTime = live.endsAt ? new Date(live.endsAt).getTime() : Date.now() + AUCTION_DURATION_MS;
+      if (auctionEndTime < Date.now()) auctionEndTime = Date.now() + AUCTION_DURATION_MS;
+      liveAuctionDocId = live._id;
+      console.log("Restored live auction for", player.name);
+    } catch (e) {
+      console.error("Failed to restore auction state:", e.message);
+    }
+  };
+  restoreLiveAuction();
 
   io.on("connection", (socket) => {
     console.log("Client connected:", socket.id);
 
-    socket.on("start-auction", async () => {
+    socket.on("start-auction", async ({ hostToken } = {}) => {
+      if (!isHost(hostToken)) {
+        return socket.emit("auction-error", { message: "Invalid host code" });
+      }
+      if (currentPlayer) {
+        return socket.emit("auction-error", { message: "An auction is already live" });
+      }
       isContinuousMode = true;
-      console.log("Starting auction...");
       await startNextAuction();
     });
 
-    socket.on("stop-continuous-auction", () => {
-      console.log("Stopping continuous auction mode...");
-      isContinuousMode = false;
-      // We don't stop the current auction, just the loop.
-    });
-
-    socket.on("request-current-state", async () => {
-      if (currentPlayer) {
-        socket.emit("current-state", {
-          player: currentPlayer,
-          auctionEndTime,
-          highestBid: currentHighestBid,
-          highestBidder: currentHighestBidder,
-          isContinuousMode
-        });
+    socket.on("stop-continuous-auction", ({ hostToken } = {}) => {
+      if (!isHost(hostToken)) {
+        return socket.emit("auction-error", { message: "Invalid host code" });
       }
+      isContinuousMode = false;
     });
 
-    socket.on("place-bid", async ({ teamId, amount }) => {
-      if (!currentPlayer) return;
-
-      const team = await Team.findById(teamId);
-      if (!team || amount > team.purse) return;
-
-      currentHighestBid = amount;
-      currentHighestBidder = teamId;
-      auctionEndTime = Date.now() + 30000; // Reset timer on bid
-
-      console.log("Broadcasting new bid:", { teamId, amount });
-      io.emit("new-bid", { 
-        teamId, 
-        amount,
-        auctionEndTime 
+    socket.on("request-current-state", () => {
+      socket.emit("current-state", {
+        player: currentPlayer,
+        auctionEndTime,
+        highestBid: currentHighestBid,
+        highestBidder: currentHighestBidder,
+        isContinuousMode,
       });
     });
 
-    socket.on("force-sold", async ({ teamId, amount }) => {
-       if (!currentPlayer) return;
-       // Trigger finalization immediately
-       await finalizeAuction(teamId, amount, currentPlayer._id);
-    });
-
-    socket.on("force-unsold", async () => {
-       if (!currentPlayer) return;
-       await handleUnsold(currentPlayer._id);
-    });
-
-    socket.on("finalize-auction", async ({ teamId, amount, playerId }) => {
-      await finalizeAuction(teamId, amount, playerId);
-    });
-
-    socket.on("unsold-player", async ({ playerId }) => {
-      await handleUnsold(playerId);
-    });
-
-    const finalizeAuction = async (teamId, amount, playerId) => {
-      if (!currentPlayer || currentPlayer._id.toString() !== playerId.toString()) {
-        console.log("Finalize mismatch:", { 
-           current: currentPlayer?._id, 
-           received: playerId 
-        });
-        return;
+    socket.on("place-bid", async ({ teamId, amount }) => {
+      if (!currentPlayer) {
+        return socket.emit("bid-rejected", { message: "No player is on the block right now" });
       }
 
-      const player = await Player.findById(playerId);
       const team = await Team.findById(teamId);
-
-      if (!player || !team) return;
-
-      player.isSold = true;
-      player.soldTo = teamId;
-      player.soldPrice = amount;
-      player.isAlreadyAuctioned = true;
-      await player.save();
-
-      team.players.push(playerId);
-      team.purse -= amount;
-      await team.save();
-
-      io.emit("player-sold", { player, team });
-      
-      currentPlayer = null;
-      auctionEndTime = null;
-
-      if (isContinuousMode) {
-        setTimeout(startNextAuction, 3000);
+      if (!team) {
+        return socket.emit("bid-rejected", { message: "Team not found" });
       }
-    };
 
-    const handleUnsold = async (playerId) => {
-      if (!currentPlayer || currentPlayer._id.toString() !== playerId.toString()) {
-         console.log("Unsold mismatch:", { 
-           current: currentPlayer?._id, 
-           received: playerId 
+      const minBid = currentHighestBidder
+        ? currentHighestBid + getIncrementAmount(currentHighestBid)
+        : currentPlayer.basePrice;
+
+      if (amount < minBid) {
+        return socket.emit("bid-rejected", {
+          message: `Bid too low. Minimum bid is $${minBid.toLocaleString()}`,
+          minBid,
         });
-        return;
+      }
+      if (amount > team.purse) {
+        return socket.emit("bid-rejected", {
+          message: `${team.name} cannot afford $${amount.toLocaleString()}`,
+        });
       }
 
-      const player = await Player.findById(playerId);
-      if (!player) return;
+      currentHighestBid = amount;
+      currentHighestBidder = teamId;
+      auctionEndTime = Date.now() + AUCTION_DURATION_MS;
 
-      player.isSold = false;
-      player.isAlreadyAuctioned = true;
-      await player.save();
-
-      io.emit("player-unsold", { player });
-
-      currentPlayer = null;
-      auctionEndTime = null;
-
-      if (isContinuousMode) {
-        setTimeout(startNextAuction, 3000);
+      if (liveAuctionDocId) {
+        try {
+          await Auction.findByIdAndUpdate(liveAuctionDocId, {
+            highestBid: amount,
+            highestBidder: teamId,
+            endsAt: new Date(auctionEndTime),
+            $push: { bidHistory: { team: teamId, amount, timestamp: new Date() } },
+          });
+        } catch (e) {
+          console.error("Failed to record bid:", e.message);
+        }
       }
-    };
+
+      io.emit("new-bid", {
+        teamId,
+        teamName: team.name,
+        amount,
+        auctionEndTime,
+      });
+    });
+
+    socket.on("force-sold", async ({ hostToken } = {}) => {
+      if (!isHost(hostToken)) {
+        return socket.emit("auction-error", { message: "Invalid host code" });
+      }
+      if (!currentPlayer || !currentHighestBidder) return;
+      await finalizeAuction(currentHighestBidder, currentHighestBid, currentPlayer._id);
+    });
+
+    socket.on("force-unsold", async ({ hostToken } = {}) => {
+      if (!isHost(hostToken)) {
+        return socket.emit("auction-error", { message: "Invalid host code" });
+      }
+      if (!currentPlayer) return;
+      await handleUnsold(currentPlayer._id);
+    });
 
     socket.on("disconnect", () => {
       console.log("Client disconnected:", socket.id);

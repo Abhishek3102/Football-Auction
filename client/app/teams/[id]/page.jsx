@@ -60,7 +60,8 @@ export default function TeamDetailsPage() {
     const assets = getTeamAssets(team.name)
     const totalSpent = team.players?.reduce((sum, p) => sum + (p.soldPrice || 0), 0) || 0
     const totalRating = team.players?.reduce((sum, p) => sum + (p.rating || 0), 0) || 0
-    const remainingBudget = team.purse - totalSpent
+    // team.purse is already decremented on each sale, so it IS the remaining budget
+    const remainingBudget = team.purse
 
     return (
         <div
@@ -148,23 +149,44 @@ export default function TeamDetailsPage() {
                     </h2>
 
                     {team.players && team.players.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {team.players.map((player) => (
-                                <Card key={player._id} className="bg-black/40 backdrop-blur-xl border-white/10 hover:bg-black/50 transition-all duration-300 group shadow-lg">
-                                    <CardContent className="p-4 flex items-center justify-between">
-                                        <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors">{player.name}</h3>
-                                            <p className="text-gray-300">{player.position}</p>
+                        <div className="space-y-8">
+                            {[
+                                ["Goalkeeper", "Goalkeepers", "🧤"],
+                                ["Defender", "Defenders", "🛡️"],
+                                ["Midfielder", "Midfielders", "🎯"],
+                                ["Forward", "Forwards", "⚽"],
+                            ].map(([position, label, icon]) => {
+                                const group = team.players.filter((p) => p.position === position)
+                                if (group.length === 0) return null
+                                return (
+                                    <div key={position}>
+                                        <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                                            <span>{icon}</span> {label}
+                                            <span className="text-sm font-normal text-gray-400">
+                                                ({group.length})
+                                            </span>
+                                        </h3>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                            {group.map((player) => (
+                                                <Card key={player._id} className="bg-black/40 backdrop-blur-xl border-white/10 hover:bg-black/50 transition-all duration-300 group shadow-lg">
+                                                    <CardContent className="p-4 flex items-center justify-between">
+                                                        <div>
+                                                            <h3 className="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors">{player.name}</h3>
+                                                            <p className="text-gray-300">{player.position}</p>
+                                                        </div>
+                                                        <div className="text-right">
+                                                            <div className="text-lg font-bold text-green-400">${player.soldPrice?.toLocaleString()}</div>
+                                                            <Badge variant="outline" className="text-yellow-400 border-yellow-400 mt-1">
+                                                                {player.rating} Rating
+                                                            </Badge>
+                                                        </div>
+                                                    </CardContent>
+                                                </Card>
+                                            ))}
                                         </div>
-                                        <div className="text-right">
-                                            <div className="text-lg font-bold text-green-400">${player.soldPrice?.toLocaleString()}</div>
-                                            <Badge variant="outline" className="text-yellow-400 border-yellow-400 mt-1">
-                                                {player.rating} Rating
-                                            </Badge>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            ))}
+                                    </div>
+                                )
+                            })}
                         </div>
                     ) : (
                         <div className="text-center py-12 bg-black/20 rounded-xl border border-white/10 backdrop-blur-md">
